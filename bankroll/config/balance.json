@@ -1,0 +1,21 @@
+{
+  "startingCash": 1000,
+  "turnOrderBonuses": [0, 50, 100, 150],
+  "startSalary": 200,
+  "landingOnStartPaysSalary": false,
+  "jailFine": 150,
+  "jailTurns": 3,
+  "bankruptcyCashFloor": -500,
+  "propertySellPercentage": 0.8,
+  "successfulAuctionBonus": 100,
+  "maxBuildingsPerCity": 3,
+  "buildingLiquidation": "reset_without_refund",
+  "buildingNetWorthValue": 120,
+  "roundCaps": [30, 50, 0],
+  "netWorthTargets": [3000, 5000, 7000],
+  "bonusRollOnSix": true,
+  "maxConsecutiveSixes": 0,
+  "allowNegativeCash": true,
+  "allowManagementOnlyOnOwnTurn": true,
+  "propertyNamesAreOriginal": true
+}

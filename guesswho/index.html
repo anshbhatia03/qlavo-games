@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0B63CE">
+<title>Guess Who: The Circle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@700;800;900&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --red:#D92525;--blue:#0B63CE;--cream:#F8F6EE;--sky:#00A3E0;--gold:#FFCC00;--yellow:#FEE123;
+ --ink:#1c2430;--muted:#5b6b7d;--white:#ffffff;
+}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#eef3f9;color:var(--ink);font-family:'Quicksand',system-ui,sans-serif;overflow-x:hidden}
+@media(min-width:901px){html,body{height:100%;overflow:hidden}.shell{height:100%;display:flex;flex-direction:column;padding:10px 16px 12px;max-width:1500px}body.in-game .topbar{display:none}#gameView{flex:1;min-height:0;display:flex;flex-direction:column}.game-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}.game-grid{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) 210px;gap:12px;align-items:stretch}.main{display:flex;flex-direction:column;gap:6px;min-height:0}.status{padding:5px 12px}.status strong{font-size:12.5px}.status small{font-size:10.5px;margin-top:1px}.secret-strip{margin-bottom:8px;grid-template-columns:1fr auto}.secret-card{padding:6px 12px}.secret-card .who{font-size:18px}.target-chip{padding:6px 11px;font-size:12px}#board{flex:1;min-height:0;display:flex;flex-direction:column}.gw-board{flex:1;min-height:0;display:flex;flex-direction:column;padding:10px;border-width:4px;border-radius:16px}.gw-header{padding:0 2px 7px}.gw-logo{font-size:15px}.gw-count{font-size:9px;padding:3px 8px}.tile-grid{flex:1;min-height:0;display:flex;flex-direction:column;gap:6px}.tile-row{flex:1;min-height:0;display:grid;grid-template-columns:repeat(8,1fr);gap:6px;align-content:center}.action-strip{padding:6px 12px;gap:8px}.action-title{font-size:12px;min-width:140px}.guess-btn,.pass-btn{padding:8px 16px;font-size:13.5px}.side{display:flex;flex-direction:column;gap:10px;min-height:0;overflow:auto}.players-card,.rules{padding:10px 12px}.players{gap:5px}.player{padding:6px 9px}.pstats{font-size:13px}.pmeta{font-size:8px}.rules{font-size:10.5px;line-height:1.45}.rules p{margin:0 0 5px}}
+body{background:
+ radial-gradient(circle at 8% -10%,rgba(255,204,0,.22),transparent 26rem),
+ radial-gradient(circle at 95% 0%,rgba(0,163,224,.16),transparent 28rem),
+ linear-gradient(180deg,#f2f6fb,#e4ecf5)}
+button,input{font:inherit}button{cursor:pointer;border:0}
+.shell{max-width:1240px;margin:auto;padding:22px 18px 55px}
+.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:36px}
+.brand{display:flex;gap:11px;align-items:center;font-family:'Baloo 2',cursive;font-weight:800;font-size:19px;color:var(--blue)}
+.brand-mark{height:38px;width:56px;border-radius:10px;background:var(--red);position:relative;box-shadow:inset 0 -4px 0 rgba(0,0,0,.18),0 4px 12px rgba(217,37,37,.35)}
+.brand-mark:after{content:"?";position:absolute;inset:0;display:grid;place-items:center;color:var(--yellow);font-size:24px;font-weight:800}
+.eyebrow{font-family:'Nunito',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:900;margin-bottom:10px}
+.hero{margin-bottom:30px;max-width:680px}
+.hero h1{font-family:'Baloo 2',cursive;font-weight:800;line-height:.98;font-size:clamp(46px,7vw,80px);margin:0 0 14px;color:var(--blue);letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--red);text-shadow:3px 3px 0 var(--yellow)}
+.copy{color:var(--muted);font-size:17px;line-height:1.65;margin:0;font-weight:600}
+.home-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:840px}
+.panel{background:var(--white);border-radius:20px;padding:22px;border:3px solid var(--ink);box-shadow:6px 6px 0 rgba(28,36,48,.9)}
+.panel h2{font-family:'Baloo 2',cursive;font-size:21px;margin:0 0 6px;color:var(--blue)}
+.panel p{font-size:13px;color:var(--muted);line-height:1.55;margin:0 0 15px;font-weight:600}
+.form{display:grid;gap:10px}
+.input{width:100%;padding:13px 14px;background:var(--cream);border:2px solid var(--ink);border-radius:12px;outline:0;color:var(--ink);font-weight:700}
+.input:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(0,163,224,.25)}
+.primary,.secondary{padding:13px 16px;border-radius:12px;font-family:'Baloo 2',cursive;font-weight:800;font-size:16px;transition:.15s;border:3px solid var(--ink)}
+.primary{background:var(--red);color:var(--white);box-shadow:0 5px 0 rgba(28,36,48,.9)}
+.primary:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 7px 0 rgba(28,36,48,.9)}
+.secondary{background:var(--blue);color:var(--white);box-shadow:0 5px 0 rgba(28,36,48,.9)}
+.secondary:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 7px 0 rgba(28,36,48,.9)}
+button:disabled{opacity:.45;cursor:not-allowed}.error{min-height:18px;color:var(--red);font-size:12px;font-weight:800}
+.hidden{display:none!important}
+/* ---------- game ---------- */
+.game-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:16px}
+.game-title{font-family:'Baloo 2',cursive;font-weight:800;font-size:clamp(34px,5vw,52px);line-height:1;margin:0 0 8px;color:var(--blue)}
+.game-title em{font-style:normal;color:var(--red);text-shadow:2px 2px 0 var(--yellow)}
+.room-pill{display:inline-flex;align-items:center;gap:7px;padding:7px 12px;border-radius:999px;background:var(--gold);color:var(--ink);font-family:'Nunito',sans-serif;font-size:12px;font-weight:900;letter-spacing:.1em;border:2px solid var(--ink)}
+.room-actions{display:flex;gap:8px}
+.small-btn{padding:9px 13px;background:var(--white);border:2px solid var(--ink);border-radius:10px;color:var(--ink);font-family:'Nunito',sans-serif;font-size:12px;font-weight:900;box-shadow:0 3px 0 rgba(28,36,48,.9)}
+.small-btn:hover{transform:translateY(-1px)}
+.game-grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:18px;align-items:start}@media(min-width:901px){.game-grid{align-items:stretch}}
+.main{display:grid;gap:14px}@media(min-width:901px){.main{display:flex;flex-direction:column;gap:10px;min-height:0}}
+.status{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 17px;background:var(--white);border:3px solid var(--ink);border-radius:14px;box-shadow:4px 4px 0 rgba(28,36,48,.85)}
+.status strong{display:block;font-family:'Baloo 2',cursive;font-size:16px;color:var(--blue)}
+.status small{display:block;color:var(--muted);font-size:12px;margin-top:2px;font-weight:700}
+.badge{background:var(--yellow);border:2px solid var(--ink);color:var(--ink);font-family:'Nunito',sans-serif;font-size:11px;font-weight:900;padding:5px 10px;border-radius:999px;white-space:nowrap}
+/* the physical board */
+.gw-board{border-radius:22px;padding:16px;background:linear-gradient(165deg,var(--blue),#084a9e);border:5px solid var(--cream);box-shadow:0 20px 50px rgba(11,99,206,.4),inset 0 3px 0 rgba(255,255,255,.25),inset 0 -6px 0 rgba(0,0,0,.22)}
+.gw-header{display:flex;align-items:center;justify-content:space-between;padding:2px 4px 13px}
+.gw-logo{font-family:'Baloo 2',cursive;font-weight:800;font-size:24px;color:var(--gold);text-shadow:2px 2px 0 rgba(0,0,0,.35)}
+.gw-logo span{color:var(--yellow)}
+.gw-count{color:#cfe2ff;font-family:'Nunito',sans-serif;font-size:11px;font-weight:900;letter-spacing:.09em;text-transform:uppercase;background:rgba(0,0,0,.22);padding:4px 10px;border-radius:999px}
+.tile-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:9px}@media(min-width:901px){.tile-grid{display:flex;flex-direction:column;gap:6px;flex:1;min-height:0}}
+@keyframes dealIn{from{opacity:0;transform:translateY(16px) scale(.88)}to{opacity:1;transform:none}}
+.tile{perspective:500px;cursor:pointer;-webkit-tap-highlight-color:transparent;animation:dealIn .38s cubic-bezier(.22,1.3,.36,1) backwards}
+.tile-inner{position:relative;width:100%;aspect-ratio:5/7;transform-style:preserve-3d;transition:transform .38s cubic-bezier(.5,1.6,.45,.9)}
+.tile.flipped .tile-inner{transform:rotateX(168deg)}
+.tile-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:7px;overflow:hidden;border:2.5px solid var(--cream);box-shadow:0 3px 8px rgba(0,0,0,.35)}
+.tile-front{background:var(--sky);display:flex;flex-direction:column;transition:box-shadow .18s}
+.tile.selected .tile-front{box-shadow:0 0 0 3px var(--yellow),0 0 16px rgba(254,225,35,.75)}
+.tile:hover:not(.flipped) .tile-front{box-shadow:0 0 0 3px var(--gold),0 6px 14px rgba(0,0,0,.4)}
+.tile-face svg{width:100%;flex:1;display:block}
+.tile-name{font-family:'Nunito',sans-serif;font-size:9.5px;font-weight:900;color:var(--ink);text-align:center;padding:3px 2px;background:var(--cream);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-transform:uppercase;letter-spacing:.02em}
+@media(min-width:901px){
+.status{padding:5px 12px!important}
+.status strong{font-size:12.5px!important}
+.status small{font-size:10.5px!important;margin-top:1px!important}
+.action-strip{padding:6px 12px!important;gap:8px!important}
+.action-title{font-size:12px!important;min-width:140px!important}
+.guess-btn,.pass-btn{padding:8px 16px!important;font-size:13.5px!important}
+.secret-strip{margin-bottom:6px!important;gap:8px!important}
+.secret-card{padding:4px 11px!important}
+.secret-card .who{font-size:16px!important}
+.target-chip{padding:5px 10px!important;font-size:11.5px!important}
+.main{gap:6px!important}
+.tile-name{font-size:clamp(9px,.72vw,12px);line-height:1.08;padding:2px 3px 3px;white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:clip}
+.tile-row{grid-template-rows:minmax(0,100%);align-items:stretch}
+.tile-row>.tile{display:block;min-height:0;position:relative;height:100%}
+.tile-row>.tile .tile-inner{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto}}
+.tile-back{transform:rotateX(180deg);background:repeating-linear-gradient(45deg,var(--red),var(--red) 8px,#b81e1e 8px,#b81e1e 16px);display:grid;place-items:center}
+.tile-back span{font-family:'Baloo 2',cursive;font-size:38px;color:var(--yellow);text-shadow:2px 2px 0 rgba(0,0,0,.3)}
+/* action strip */
+.action-strip{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:14px 16px;border-radius:14px;background:var(--white);border:3px solid var(--ink);box-shadow:4px 4px 0 rgba(28,36,48,.85)}
+.action-title{font-size:13.5px;font-weight:700;flex:1;min-width:200px;color:var(--ink)}
+.guess-btn{background:var(--red);color:var(--white);padding:12px 26px;border-radius:11px;font-family:'Baloo 2',cursive;font-weight:800;font-size:16px;border:3px solid var(--ink);box-shadow:0 4px 0 rgba(28,36,48,.9)}
+.pass-btn{background:var(--blue);color:var(--white);padding:12px 26px;border-radius:11px;font-family:'Baloo 2',cursive;font-weight:800;font-size:16px;border:3px solid var(--ink);box-shadow:0 4px 0 rgba(28,36,48,.9)}
+.guess-btn:hover:not(:disabled),.pass-btn:hover{transform:translateY(-2px)}
+.secret-strip{display:grid;grid-template-columns:1fr auto;gap:10px;margin-bottom:14px}
+.secret-card{padding:12px 16px;border-radius:14px;background:var(--gold);border:3px solid var(--ink);box-shadow:4px 4px 0 rgba(28,36,48,.85);display:flex;align-items:center;gap:12px}
+.secret-card .holder{font-family:'Nunito',sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:rgba(28,36,48,.7);font-weight:900}
+.secret-card .who{font-family:'Baloo 2',cursive;font-size:27px;color:var(--ink);font-weight:800;line-height:1.05}
+.target-chip{padding:11px 15px;border-radius:14px;background:var(--white);border:3px solid var(--ink);font-size:14px;font-weight:800;display:flex;align-items:center;box-shadow:4px 4px 0 rgba(28,36,48,.85)}
+.target-chip small{display:block;color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.1em;font-weight:900}
+.side{display:grid;gap:16px}
+.players-card,.rules{background:var(--white);border:3px solid var(--ink);border-radius:16px;padding:16px;box-shadow:4px 4px 0 rgba(28,36,48,.85)}
+.players-card h3,.rules h3{font-family:'Nunito',sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);margin:0 0 11px;font-weight:900}
+.players{display:grid;gap:8px}
+.player{display:grid;grid-template-columns:1fr auto;align-items:center;gap:8px;padding:9px 11px;border-radius:11px;background:var(--cream);border:2px solid transparent;transition:.2s}
+.player.turn{border-color:var(--red);background:#fff3d6}
+.player.out{opacity:.45}
+.pname{display:flex;align-items:center;gap:6px;font-family:'Nunito',sans-serif;font-size:12px;font-weight:900}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--sky);border:1.5px solid var(--ink)}.dot.off{background:#b8c4d0}
+.host{color:var(--red);font-size:9px;text-transform:uppercase}
+.pstats{text-align:right;color:var(--blue);font-family:'Baloo 2',cursive;font-weight:800;font-size:16px}
+.pmeta{display:block;color:var(--muted);font-size:9px;font-weight:800}
+.rules{font-size:12px;line-height:1.6;color:var(--muted);font-weight:600}.rules p{margin:0 0 9px}.rules p:last-child{margin:0}.rules strong{color:var(--ink)}
+.actions{display:flex;gap:9px;flex-wrap:wrap}.actions button{font-size:14px}
+.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:var(--ink);color:var(--white);padding:12px 16px;border-radius:12px;font-family:'Nunito',sans-serif;font-size:12px;font-weight:900;box-shadow:0 12px 35px rgba(0,0,0,.3);transition:.2s;z-index:6}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+/* ---------- win / lose overlay ---------- */
+#overlay{position:fixed;inset:0;z-index:20;display:grid;place-items:center;background:rgba(12,20,32,.82);backdrop-filter:blur(6px);animation:fadeIn .3s ease}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.overlay-card{text-align:center;padding:44px 40px;border-radius:26px;border:5px solid var(--ink);max-width:430px;width:calc(100% - 40px);position:relative;overflow:hidden;animation:slam .55s cubic-bezier(.2,1.7,.45,1)}
+@keyframes slam{0%{opacity:0;transform:scale(.5) rotate(-6deg)}70%{transform:scale(1.06) rotate(1.5deg)}100%{opacity:1;transform:none}}
+.overlay-card.win{background:linear-gradient(160deg,var(--gold),#ffe97a)}
+.overlay-card.lose{background:linear-gradient(160deg,#c9352f,#8f1d19)}
+.overlay-card .big-emoji{font-size:74px;display:block;animation:bounceIn .8s cubic-bezier(.2,1.8,.4,1) .15s backwards}
+@keyframes bounceIn{0%{transform:scale(0) rotate(-30deg)}60%{transform:scale(1.35) rotate(8deg)}100%{transform:scale(1) rotate(0)}}
+.overlay-card h2{font-family:'Baloo 2',cursive;font-weight:800;font-size:clamp(38px,8vw,54px);line-height:1;margin:10px 0 8px;color:var(--ink)}
+.overlay-card.lose h2{color:var(--white)}
+.overlay-card p{font-family:'Nunito',sans-serif;font-weight:800;font-size:14px;margin:0 0 20px;color:rgba(28,36,48,.75)}
+.overlay-card.lose p{color:rgba(255,255,255,.85)}
+.overlay-card button{font-size:16px}
+.confetti{position:absolute;top:-14px;width:10px;height:16px;border-radius:2px;animation:fall linear forwards;z-index:1;pointer-events:none}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.6}}
+.shake{animation:shake .5s cubic-bezier(.36,.07,.19,.97)}
+@keyframes shake{10%,90%{transform:translateX(-2px)}20%,80%{transform:translateX(4px)}30%,50%,70%{transform:translateX(-7px)}40%,60%{transform:translateX(7px)}}
+@media(max-width:900px){.game-grid{grid-template-columns:1fr}.side{order:2;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.side>*{min-width:0}.tile-grid{display:grid!important;grid-template-columns:repeat(4,1fr);gap:7px}.tile-row{display:contents}.action-strip{position:sticky;bottom:0;z-index:5;box-shadow:0 -4px 14px rgba(28,36,48,.18)}}
+@media(max-width:640px){body.in-game .topbar{display:none}.rules{display:none}.players-card{padding:8px 10px}.players{display:flex;overflow-x:auto;gap:6px;padding-bottom:2px}.player{flex:0 0 auto;min-width:112px;padding:6px 8px}.secret-strip{grid-template-columns:1fr auto;gap:6px;margin-bottom:6px}.secret-card{padding:5px 10px;display:flex;align-items:center;gap:8px}.secret-card .who{font-size:15px}.secret-card .holder{display:none}.target-chip{padding:5px 10px;font-size:11px}.target-chip small{display:none}.status{padding:8px 12px;flex-direction:row;align-items:center}.status strong{font-size:12.5px}.status small{font-size:10.5px}.action-strip{padding:7px 10px;gap:6px}.action-title{flex-basis:100%;min-width:0;font-size:10.5px}.guess-btn,.pass-btn{padding:9px 14px;font-size:13px;flex:1}.tile-name{font-size:8.2px;line-height:1.12;padding:2px 2px 3px;white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:clip}.shell{padding:16px 12px 48px}.home-grid{grid-template-columns:1fr}.side{grid-template-columns:1fr}.secret-strip{grid-template-columns:1fr}.status{flex-direction:column;align-items:flex-start}.topbar{margin-bottom:16px}.game-head{margin-bottom:10px}.game-title{font-size:30px;margin-bottom:4px}.eyebrow{margin-bottom:2px;font-size:9px}.room-pill{padding:5px 9px;font-size:10px}.hero{margin-bottom:20px}.hero h1{font-size:clamp(38px,11vw,54px)}.copy{font-size:15px}.panel{padding:17px;border-radius:17px}.status{padding:10px 13px}.status strong{font-size:14px}.secret-card .who{font-size:21px}.target-chip{padding:9px 12px;font-size:12.5px}.gw-board{padding:9px;border-radius:15px;border-width:4px}.gw-header{padding:0 2px 8px}.gw-logo{font-size:16px}.gw-count{font-size:9px;padding:3px 8px}.tile-grid{gap:6px}.tile-face{border-radius:6px;border-width:2px}.tile-name{font-size:8.4px;padding:2px 2px 3px;line-height:1.1}.guess-btn,.pass-btn{padding:10px 18px;font-size:14px;flex:1}.action-title{min-width:0;font-size:12px}.players-card,.rules{padding:12px}.rules{font-size:11px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="topbar"><div class="brand"><span class="brand-mark"></span><span>Guess Who: The Circle</span></div><span style="font-family:'Nunito';font-size:11px;font-weight:900;letter-spacing:.12em;color:var(--muted)">PRIVATE MULTIPLAYER</span></header>
+<main id="homeView">
+<section class="hero"><div class="eyebrow">Your names. Your questions. Your table.</div><h1>Flip down<br><em>everyone else.</em></h1><p class="copy">The classic Guess Who board, rebuilt around your people. Ask your questions on the call, flip down the faces that are out, and guess whenever you're ready. Wrong guess? You just lose the turn.</p></section>
+<section class="home-grid"><div class="panel"><h2>Start a room</h2><p>You become host. Share the invite once your friends join.</p><form id="createForm" class="form"><input class="input" id="createName" maxlength="18" autocomplete="nickname" placeholder="Your name" required><button class="primary" type="submit">Create room</button><div id="createError" class="error"></div></form></div><div class="panel"><h2>Join your friends</h2><p>Enter the four-letter room code from the host.</p><form id="joinForm" class="form"><input class="input" id="joinName" maxlength="18" autocomplete="nickname" placeholder="Your name" required><input class="input" id="roomInput" maxlength="4" autocapitalize="characters" placeholder="Room code" required><button class="secondary" type="submit">Join room</button><div id="joinError" class="error"></div></form></div></section>
+</main>
+<main id="gameView" class="hidden">
+<div class="game-bar"><span class="room-pill">ROOM <span id="roomCode">----</span></span><div class="room-actions"><button class="small-btn" id="copyLink">Copy invite</button><button class="small-btn" id="leaveGame">Leave</button></div></div>
+<div class="game-grid">
+<section class="main">
+<div class="status"><div><strong id="eventMessage">Waiting for the host.</strong><small id="turnMessage">Share the invite to fill the circle.</small></div><div id="roundBadge" class="badge">LOBBY</div></div>
+<div id="board"></div>
+<div class="action-strip" id="actionStrip"></div>
+<div id="gameActions" class="actions"></div>
+</section>
+<aside class="side"><div class="players-card"><h3>In the circle</h3><div id="players" class="players"></div></div><div class="rules"><h3>Rules</h3><p><strong>Ask:</strong> question anyone verbally on the call, any time it helps you.</p><p><strong>Guess:</strong> select any face and hit Guess — always available on your turn.</p><p><strong>Wrong guess:</strong> just a lost turn. Nobody is eliminated.</p><p><strong>Win:</strong> first correct guess takes the round.</p></div></aside>
+</div>
+</main>
+</div><div id="toast" class="toast"></div>
+<script>
+const $=id=>document.getElementById(id);const BASE_PATH=location.pathname.startsWith('/guesswho')?'/guesswho':'';const SESSION_KEY='guesswho_session_v2';let socket=null,session=null,current=null,marked=new Set(),selectedCandidate=null,roundKey='',overlayShown='',guessMode=false;
+function toast(m){const t=$('toast');t.textContent=m;t.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.classList.remove('show'),2300)}
+function error(id,m){$(id).textContent=m||''}
+function esc(v){return String(v).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
+function hash(s){let h=0;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))>>>0;return h}
+function faceSvg(name){
+ // hand-tuned traits per real person
+ const T={
+  'Yash':            {skin:'#F2C9A0',hair:'#241A12',curly:2,glasses:1,baby:1,chubby:1,long:1,beard:0,shirt:'#3FAE5A'},
+  'Inan':            {skin:'#D9A06B',hair:'#241A12',curly:2,shirt:'#FFCC00'},
+  'Sid':             {skin:'#8A5430',hair:'#1C1C22',short:1,shirt:'#D92525'},
+  'Karan':           {skin:'#F2C9A0',hair:'#241A12',turban:1,beard:1,full:1,shirt:'#FFCC00'},
+  'Chaitanya':       {skin:'#8A5430',hair:'#1C1C22',curly:2,shirt:'#3FAE5A'},
+  'Vikram':          {skin:'#F2C9A0',hair:'#241A12',baby:1,tri:1,thin:1,short:1,shirt:'#0B63CE'},
+  'Ansh':            {skin:'#E0AC7E',hair:'#1C1C22',kohlibeard:1,short:1,shirt:'#3FAE5A'},
+  'Aditya Swarup':   {skin:'#F2C9A0',hair:'#241A12',baby:1,chubby:1,short:1,shirt:'#FFCC00'},
+  'Deepankar':       {skin:'#C68A5A',hair:'#1C1C22',chubby:1,fat:1,short:1,shirt:'#3FAE5A'},
+  'Satvik':          {skin:'#E0AC7E',hair:'#241A12',curly:2,long:1,thin:1,glasses:1,shirt:'#FFCC00'},
+  'Navya':           {skin:'#C68A5A',hair:'#1C1C22',girl:1,long:1,chubby:1,fat:1,shirt:'#D92525'},
+  'Vanya':           {skin:'#C68A5A',hair:'#1C1C22',girl:1,long:1,chubby:1,fat:1,twin:1,shirt:'#D92525'},
+  'Raseel':          {skin:'#F7DCC0',hair:'#4A2F1D',girl:1,broad:1,long:1,shirt:'#D92525'},
+  'Adhyan':          {skin:'#F2C9A0',hair:'#241A12',curly:2,glasses:1,long:1,shirt:'#0B63CE'},
+  'Juhi':            {skin:'#F7DCC0',hair:'#241A12',girl:1,thin:1,glasses:1,long:1,shirt:'#0B63CE'},
+  'Jaishree':        {skin:'#8A5430',hair:'#1C1C22',girl:1,long:1,shirt:'#D92525'},
+  'Dhruv Khanna':    {skin:'#F2C9A0',hair:'#241A12',dense:1,glasses:1,short:1,shirt:'#3FAE5A'},
+  'Nysa':            {skin:'#F2C9A0',hair:'#241A12',girl:1,long:1,chubby:1,shirt:'#D92525'},
+  'Neel':            {skin:'#8A5430',hair:'#1C1C22',baby:1,short:1,shirt:'#3FAE5A'},
+  'Uttkarsh':        {skin:'#E0AC7E',hair:'#241A12',receding:1,glasses:1,short:1,hairy:1,shirt:'#D92525'},
+  'Chopra':          {skin:'#C68A5A',hair:'#1C1C22',fat:1,chubby:1,short:1,shirt:'#3FAE5A'},
+  'Tia':             {skin:'#F2C9A0',hair:'#241A12',girl:1,thin:1,long:1,shirt:'#FFCC00'},
+  'Ketch':           {skin:'#F2C9A0',hair:'#241A12',short:1,normal:1,shirt:'#D92525'},
+  'Ravtej':          {skin:'#F2C9A0',hair:'#241A12',fat:1,messy:1,short:1,shirt:'#3FAE5A'},
+ };
+ const t=T[name]||{skin:'#E0AC7E',hair:'#1C1C22',short:1};
+ const h=hash(name),p=(n,m)=>((h>>n)&0xffff)%m;
+ const shirtC=['#D92525','#0B63CE','#3FAE5A','#E8890C','#7A3FC9','#00A3E0','#C94F8A'];
+ const shirt=t.shirt||(t.celeb?'#111827':shirtC[p(7,shirtC.length)]);
+ const skin=t.skin,hair=t.hair;
+ const curly=t.curly,glasses=!!t.glasses,baby=!!t.baby,chubby=!!t.chubby,fat=!!t.fat,thin=!!t.thin,long=t.long||t.girl&&1,short=t.short,dense=!!t.dense,messy=!!t.messy,receding=!!t.receding,tri=!!t.tri,broad=!!t.broad;
+ const girl=!!t.girl,turban=!!t.turban,beard=!!t.beard,goatee=!!t.goatee,kohli=!!t.kohlibeard;
+ const O='#1c2430';
+ let s=`<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bg${h%97}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#33c4ff"/><stop offset="1" stop-color="#00A3E0"/></linearGradient></defs><rect width="100" height="100" fill="url(#bg${h%97})"/>`;
+ // neck + shoulders (wider if fat/chubby, narrow if thin)
+ const sw=thin?16:(fat||chubby?28:(broad?26:22));const shx=50-sw;
+ s+=`<path d="M41 68 L59 68 L59 82 L41 82 Z" fill="${skin}" stroke="${O}" stroke-width="2"/>`;
+ s+=`<path d="M${shx-6} 100 Q${shx-4} 79 50 79 Q${100-shx+4} 79 ${100-shx+6} 100 Z" fill="${shirt}" stroke="${O}" stroke-width="2.4"/>`;
+ // long hair back layer
+ if(long&&!turban)s+=`<path d="M24 48 Q22 12 50 11 Q78 12 76 48 L76 74 L66 74 L66 42 Q58 30 50 30 Q42 30 34 42 L34 74 L24 74 Z" fill="${hair}" stroke="${O}" stroke-width="2"/>`;
+ // face shape
+ let face;
+ if(tri)face=`<path d="M50 20 Q72 20 72 42 Q72 62 50 74 Q28 62 28 42 Q28 20 50 20 Z" fill="${skin}" stroke="${O}" stroke-width="2.4"/>`;
+ else if(fat||chubby)face=`<ellipse cx="50" cy="48" rx="25" ry="27" fill="${skin}" stroke="${O}" stroke-width="2.4"/>`;
+ else if(baby)face=`<ellipse cx="50" cy="48" rx="22" ry="24" fill="${skin}" stroke="${O}" stroke-width="2.4"/>`;
+ else if(broad)face=`<ellipse cx="50" cy="47" rx="25" ry="24" fill="${skin}" stroke="${O}" stroke-width="2.4"/>`;
+ else face=`<ellipse cx="50" cy="48" rx="20" ry="25" fill="${skin}" stroke="${O}" stroke-width="2.4"/>`;
+ s+=face;
+ // turban (sardar) covers hairline
+ if(turban){s+=`<path d="M27 40 Q26 16 50 15 Q74 16 73 40 L73 34 Q70 22 50 21 Q30 22 27 34 Z" fill="#1c4fa0" stroke="${O}" stroke-width="2"/><path d="M26 36 L74 36 L75 43 L25 43 Z" fill="#2456b8" stroke="${O}" stroke-width="2"/><path d="M50 21 L46 36 M54 21 L58 36" stroke="${O}" stroke-width="1.4" fill="none"/>`;}
+ else if(curly===2){ // big curly hair
+  let c='';const pts=[[26,34],[22,42],[24,50],[30,26],[36,22],[44,19],[56,18],[64,21],[72,26],[77,35],[78,44],[76,50]];
+  pts.forEach(([x,y])=>{c+=`<circle cx="${x}" cy="${y}" r="7.5" fill="${hair}" stroke="${O}" stroke-width="1.8"/>`});
+  s+=c+`<path d="M28 40 Q30 22 50 21 Q70 22 72 40 Q64 30 50 29 Q36 30 28 40 Z" fill="${hair}" stroke="${O}" stroke-width="1.8"/>`;
+ } else if(curly===1){ // short curls
+  let c='';[[28,36],[32,28],[40,23],[50,21],[60,23],[68,28],[72,36]].forEach(([x,y])=>{c+=`<circle cx="${x}" cy="${y}" r="6" fill="${hair}" stroke="${O}" stroke-width="1.6"/>`});
+  s+=c;
+ } else if(dense){ // neat, dense dark hair
+  s+=`<path d="M25 43 Q24 18 50 16 Q76 18 75 43 Q68 31 50 30 Q32 31 25 43 Z" fill="${hair}" stroke="${O}" stroke-width="2"/><path d="M29 35 Q38 23 50 23 Q62 23 71 35" stroke="#3b2a20" stroke-width="2" fill="none" stroke-linecap="round"/>`;
+ } else if(messy){ // messy spikes
+  s+=`<path d="M27 42 L24 30 L32 34 L31 24 L40 30 L44 20 L52 28 L58 19 L64 28 L72 23 L70 33 L77 31 L73 42 Q62 32 50 32 Q38 32 27 42 Z" fill="${hair}" stroke="${O}" stroke-width="2"/>`;
+ } else if(receding&&t.hairy){ // receding but thick bushy sides+top fringe
+  s+=`<path d="M26 46 Q25 30 33 25 Q40 21 47 22 L46 32 Q38 32 34 37 Q31 41 30 48 Z" fill="${hair}" stroke="${O}" stroke-width="2"/>`;
+  s+=`<path d="M74 46 Q75 30 67 25 Q60 21 53 22 L54 32 Q62 32 66 37 Q69 41 70 48 Z" fill="${hair}" stroke="${O}" stroke-width="2"/>`;
+  s+=`<path d="M30 36 Q36 24 50 24 Q64 24 70 36 L68 42 Q62 32 50 32 Q38 32 32 42 Z" fill="${hair}" stroke="${O}" stroke-width="2"/>`;
+  let c='';[[27,38],[31,29],[38,23],[50,20],[62,23],[69,29],[73,38]].forEach(([x,y])=>{c+=`<circle cx="${x}" cy="${y}" r="5.5" fill="${hair}" stroke="${O}" stroke-width="1.6"/>`});
+  s+=c;
+ } else if(receding){ // receding hairline
+  s+=`<path d="M28 44 Q28 34 34 30 Q40 27 44 28 L44 34 Q38 34 34 38 Q31 41 31 46 Z" fill="${hair}" stroke="${O}" stroke-width="2"/><path d="M72 44 Q72 34 66 30 Q60 27 56 28 L56 34 Q62 34 66 38 Q69 41 69 46 Z" fill="${hair}" stroke="${O}" stroke-width="2"/>`;
+ } else if(long){ // front fringe over back layer
+  s+=`<path d="M28 42 Q30 20 50 19 Q70 20 72 42 Q64 30 50 30 Q36 30 28 42 Z" fill="${hair}" stroke="${O}" stroke-width="2"/>`;
+ } else if(!short||short){ // normal short hair (default)
+  s+=`<path d="M28 44 Q28 20 50 19 Q72 20 72 44 Q66 31 50 30 Q34 31 28 44 Z" fill="${hair}" stroke="${O}" stroke-width="2"/>`;
+ }
+ // eyebrows
+ s+=`<path d="M36 ${baby?42:40} L46 ${baby?42:40}" stroke="${hair}" stroke-width="2.6" stroke-linecap="round"/><path d="M54 ${baby?42:40} L64 ${baby?42:40}" stroke="${hair}" stroke-width="2.6" stroke-linecap="round"/>`;
+ // eyes
+ s+=`<circle cx="41" cy="47" r="2.8" fill="${O}"/><circle cx="59" cy="47" r="2.8" fill="${O}"/>`;
+ // nose
+ s+=`<path d="M47.5 51 L52.5 51 L50 58 Z" fill="${skin}" stroke="${O}" stroke-width="1.6"/>`;
+ if(glasses)s+=`<rect x="33" y="42" width="15" height="10" rx="4.5" fill="none" stroke="${O}" stroke-width="2.4"/><rect x="52" y="42" width="15" height="10" rx="4.5" fill="none" stroke="${O}" stroke-width="2.4"/><path d="M48 46 L52 46" stroke="${O}" stroke-width="2.4"/>`;
+ // mouth
+ if(beard||goatee||kohli){ // beards cover mouth area
+  if(kohli)s+=`<path d="M33 52 Q34 72 50 72 Q66 72 67 52 Q65 60 60 62 Q55 64 50 64 Q45 64 40 62 Q35 60 33 52 Z" fill="${hair}" stroke="${O}" stroke-width="1.8"/>`;
+  else if(goatee)s+=`<path d="M42 62 Q42 72 50 72 Q58 72 58 62 Q56 68 50 68 Q44 68 42 62 Z" fill="${hair}" stroke="${O}" stroke-width="1.6"/>`;
+  else s+=`<path d="M32 52 Q34 73 50 73 Q66 73 68 52 Q66 64 50 64 Q34 64 32 52 Z" fill="${hair}" stroke="${O}" stroke-width="1.8"/>`;
+  s+=`<path d="M43 61 Q50 65 57 61" stroke="${O}" stroke-width="2" fill="none" stroke-linecap="round"/>`;
+ } else if(smileDefault(name))s+=`<path d="M42 62 Q50 70 58 62" stroke="${O}" stroke-width="2.4" fill="none" stroke-linecap="round"/>`;
+ else s+=`<path d="M43 63 L57 63" stroke="${O}" stroke-width="2.4" stroke-linecap="round"/>`;
+ // extra body hair for the hairy ones
+ if(t.hairy){
+  s+=`<path d="M41 68 L59 68 L59 79 L41 79 Z" fill="none"/>`;
+  s+=`<path d="M42 69 L44 73 L46 69 L48 74 L50 69 L52 74 L54 69 L56 73 L58 69" fill="none" stroke="${hair}" stroke-width="1.6" stroke-linecap="round"/>`;
+  s+=`<path d="M${shx+2} 84 Q50 80 ${100-shx-2} 84" fill="none" stroke="${hair}" stroke-width="1.4" opacity=".7"/>`;
+  s+=`<path d="M${shx+6} 90 Q50 86 ${100-shx-6} 90" fill="none" stroke="${hair}" stroke-width="1.2" opacity=".55"/>`;
+  // arm hair tufts at shoulders
+  s+=`<path d="M${shx-1} 82 l3 -3 M${shx+1} 85 l3 -3 M${100-shx+1} 82 l-3 -3 M${100-shx-1} 85 l-3 -3" stroke="${hair}" stroke-width="1.3" stroke-linecap="round" opacity=".8"/>`;
+ }
+ // blush for chubby/baby
+ if(chubby||baby||fat)s+=`<ellipse cx="31" cy="55" rx="4" ry="2.5" fill="rgba(217,60,60,.25)"/><ellipse cx="69" cy="55" rx="4" ry="2.5" fill="rgba(217,60,60,.25)"/>`;
+ s+=`</svg>`;return s;
+}
+function smileDefault(name){return !['Sid','Satvik','Jaishree','Dhruv Khanna','Chopra','Uttkarsh'].includes(name)}
+function saveAndConnect(d){session=d;localStorage.setItem(SESSION_KEY,JSON.stringify(d));connect()}
+function connect(){if(!session)return;$('homeView').classList.add('hidden');$('gameView').classList.remove('hidden');document.body.classList.add('in-game');$('roomCode').textContent=session.room;const proto=location.protocol==='https:'?'wss':'ws';socket=new WebSocket(`${proto}://${location.host}${BASE_PATH}/ws/${session.room}/${session.player_id}`);socket.onopen=()=>toast('Connected to the circle');socket.onmessage=e=>{const d=JSON.parse(e.data);if(d.type==='error'){toast(d.message);return}current=d;render(d)};socket.onclose=e=>{if(e.code===4404){session=null;localStorage.removeItem(SESSION_KEY);document.body.classList.remove('in-game');location.href=BASE_PATH||'/';return}if(session){$('turnMessage').textContent='Connection paused. Retrying…';setTimeout(()=>{if(session&&(!socket||socket.readyState===WebSocket.CLOSED))connect()},1800)}}}
+function send(action){if(socket&&socket.readyState===WebSocket.OPEN)socket.send(JSON.stringify(action));else toast('Reconnecting…')}
+function closeOverlay(){document.querySelectorAll('[id="overlay"]').forEach(overlay=>overlay.remove());document.body.classList.remove('overlay-open');}
+function showOverlay(kind,title,message,viewerWon){
+ document.querySelectorAll('[id="overlay"]').forEach(overlay=>overlay.remove());
+ const o=document.createElement('div');o.id='overlay';
+ const emojis=kind==='win'?['🏆','🎉','✨','🥳']:['💀','😵','🃏'];
+ const emoji=emojis[Math.floor(Math.random()*emojis.length)];
+ o.innerHTML=`<div class="overlay-card ${kind}"><span class="big-emoji">${emoji}</span><h2>${esc(title)}</h2><p>${esc(message)}</p><button id="backToBoard" class="${kind==='win'?'primary':'secondary'}">Back to the board</button></div>`;
+ document.body.appendChild(o);document.getElementById('backToBoard').addEventListener('click',closeOverlay);
+ if(viewerWon){for(let i=0;i<70;i++){const c=document.createElement('span');c.className='confetti';c.style.left=Math.random()*100+'vw';c.style.background=['#FFCC00','#FEE123','#D92525','#0B63CE','#00A3E0','#ffffff'][Math.floor(Math.random()*6)];c.style.animationDuration=(2.2+Math.random()*2.4)+'s';c.style.animationDelay=(Math.random()*.9)+'s';c.style.width=(6+Math.random()*7)+'px';c.style.height=(9+Math.random()*9)+'px';o.appendChild(c)}}
+ else{o.querySelector('.overlay-card').classList.add('shake')}
+}
+function render(d){$('eventMessage').textContent=d.event_message;$('roundBadge').textContent=d.phase==='lobby'?'LOBBY':d.phase==='results'?'ROUND COMPLETE':`ROUND ${d.round_number}`;renderPlayers(d);
+ if(d.phase==='results'){const key=`${d.room}:${d.round_number}:${d.winner_id}`;if(overlayShown!==key){overlayShown=key;const iWon=d.winner_id===d.viewer;const g=d.last_guess||{};const viaGuess=g.correct&&g.guesser_id===d.winner_id;showOverlay(iWon?'win':'lose',iWon?'You win!':`${(d.players.find(p=>p.id===d.winner_id)||{}).name||'Someone'} wins!`,viaGuess?`Correct guess: ${g.candidate}`:d.event_message,iWon)}}
+ else overlayShown='';
+ if(d.phase==='lobby')renderLobby(d);else renderGame(d)}
+function renderPlayers(d){$('players').innerHTML=d.players.map(p=>`<div class="player${p.id===d.current_id&&d.phase==='playing'?' turn':''}"><div class="pname"><span class="dot${p.connected?'':' off'}"></span>${esc(p.name)}${p.host?'<span class="host">host</span>':''}</div><div class="pstats">${p.wins}<span class="pmeta">wins${p.id===d.current_id&&d.phase==='playing'?' · their turn':''}</span></div></div>`).join('')}
+function tileHtml(n,delay){const cls=['tile'];if(marked.has(n))cls.push('flipped');if(selectedCandidate===n)cls.push('selected');return `<div class="${cls.join(' ')}" data-candidate="${esc(n)}" style="animation-delay:${delay}s"><div class="tile-inner"><div class="tile-face tile-front">${faceSvg(n)}<div class="tile-name">${esc(n)}</div></div><div class="tile-face tile-back"><span>?</span></div></div></div>`}
+function tileRows(names){const rows=[];for(let i=0;i<names.length;i+=8)rows.push(names.slice(i,i+8));return rows.map((row,r)=>`<div class="tile-row">${row.map((n,j)=>tileHtml(n,(r*8+j)*.02)).join('')}</div>`).join('')}
+function renderLobby(d){$('turnMessage').textContent='Waiting for at least two players.';$('board').innerHTML=`<div class="gw-board"><div class="gw-header"><div class="gw-logo">GUESS <span>WHO?</span></div><div class="gw-count">24 faces loaded</div></div><div class="tile-grid">${tileRows(d.candidate_names)}</div></div>`;$('actionStrip').innerHTML='<div class="action-title">The host starts once everyone is in. Secrets are dealt privately.</div>';$('gameActions').innerHTML=d.is_host?'<button class="primary" onclick="send({action:\'start\'})">Start round</button>':''}
+function renderGame(d){$('gameActions').innerHTML='';const key=`${d.room}:${d.viewer}:${d.round_number}`;if(roundKey!==key){marked=new Set();selectedCandidate=null;roundKey=key}
+ const myTurn=d.my_turn;
+ if(!myTurn)guessMode=false;
+ const asker=d.current_name||'Someone';
+ const answerer=d.target_name||'—';
+ if(d.phase==='results'){$('turnMessage').textContent='Round complete.'}
+ else if(myTurn){$('turnMessage').textContent=guessMode?'Guess mode: tap the face you think it is.':`Your turn — ask ${answerer} on the call.`}
+ else{$('turnMessage').textContent=`${asker} has to ask ${answerer} on the call.`}
+ $('board').innerHTML=`<div class="secret-strip"><div class="secret-card"><div><div class="holder">Your mystery person</div><div class="who">${esc(d.your_secret||'Hidden')}</div></div></div><div class="target-chip"><div><small>${myTurn?'You ask':'Being asked'}</small>${esc(d.target_name||'—')}</div></div></div><div class="gw-board"><div class="gw-header"><div class="gw-logo">GUESS <span>WHO?</span></div><div class="gw-count">${d.candidate_names.length-marked.size} still up</div></div><div class="tile-grid">${tileRows(d.candidate_names)}</div></div>`;
+ let strip='';
+ if(myTurn&&guessMode&&selectedCandidate)strip=`<div class="action-title">Are you sure you want to guess <b>${esc(selectedCandidate)}</b>? A wrong guess just passes the turn.</div><button class="guess-btn" id="confirmGuess">Yes — final answer</button><button class="secondary" id="cancelGuess">Pick again</button>`;
+ else if(myTurn&&guessMode)strip=`<div class="action-title">Guess mode: tap the face you think it is.</div><button class="secondary" id="exitGuess">Exit guess mode</button>`;
+ else if(myTurn)strip=`<div class="action-title">Ask your questions on the call, flip faces to take notes, or enter guess mode when ready.</div><button class="guess-btn" id="enterGuess">Enter guess mode</button><button class="pass-btn" id="passButton">Pass turn</button>`;
+ else strip=`<div class="action-title">${esc(d.current_name||'The table')} has to ask ${esc(d.target_name||'—')} on the call. Flip your notes while you wait.</div>`;
+ $('actionStrip').innerHTML=strip;
+ document.querySelectorAll('.tile').forEach(t=>t.onclick=()=>{const n=t.dataset.candidate;if(myTurn&&guessMode){selectedCandidate=n;renderGame(d)}else{marked.has(n)?marked.delete(n):marked.add(n);renderGame(d)}});
+ const eg=$('enterGuess');if(eg)eg.onclick=()=>{guessMode=true;renderGame(d)};
+ const xg=$('exitGuess');if(xg)xg.onclick=()=>{guessMode=false;selectedCandidate=null;renderGame(d)};
+ const cg=$('confirmGuess');if(cg)cg.onclick=()=>{guessMode=false;send({action:'guess',candidate:selectedCandidate})};
+ const nc=$('cancelGuess');if(nc)nc.onclick=()=>{selectedCandidate=null;renderGame(d)};
+ const pb=$('passButton');if(pb)pb.onclick=()=>send({action:'pass_turn'})}
+async function api(url,opts){const r=await fetch(BASE_PATH+url,{headers:{'Content-Type':'application/json'},...opts});const d=await r.json().catch(()=>({detail:'Something went wrong'}));if(!r.ok)throw Error(d.detail||'Something went wrong');return d}
+$('createForm').onsubmit=async e=>{e.preventDefault();error('createError','');try{saveAndConnect(await api('/api/rooms',{method:'POST',body:JSON.stringify({name:$('createName').value})}))}catch(x){error('createError',x.message)}};
+$('joinForm').onsubmit=async e=>{e.preventDefault();error('joinError','');try{const code=$('roomInput').value.toUpperCase().trim();saveAndConnect(await api(`/api/rooms/${code}/join`,{method:'POST',body:JSON.stringify({name:$('joinName').value})}))}catch(x){error('joinError',x.message)}};
+$('copyLink').onclick=async()=>{const link=`${location.origin}${BASE_PATH}/?room=${session.room}`;try{await navigator.clipboard.writeText(`Join my Guess Who room: ${link}`);toast('Invite copied')}catch{toast(link)}};$('leaveGame').onclick=()=>{session=null;localStorage.removeItem(SESSION_KEY);if(socket)socket.close();location.href=BASE_PATH||'/'};
+const prefill=new URLSearchParams(location.search).get('room');if(prefill){$('roomInput').value=prefill.toUpperCase();$('joinName').focus()}try{const old=JSON.parse(localStorage.getItem(SESSION_KEY));if(old?.room&&old?.player_id){session=old;connect()}}catch{}
+</script>
+</body></html>

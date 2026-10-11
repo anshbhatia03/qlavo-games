@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090912">
+<title>Who Said That? — Shady</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#090912;--panel:#151524;--panel2:#1b1b2e;--ink:#faf9ff;--muted:#9995ad;--line:rgba(255,255,255,.09);--gold:#ffd23f;--pink:#ff3d9a;--cyan:#35e9f5;--green:#36d875;--red:#ff6464}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:'Space Grotesk',system-ui,sans-serif}body{background:radial-gradient(circle at 15% -10%,rgba(255,61,154,.17),transparent 34rem),radial-gradient(circle at 90% 0,rgba(53,233,245,.11),transparent 32rem),var(--bg)}button,input{font:inherit}button{cursor:pointer}.hidden{display:none!important}.shell{width:min(1080px,100%);margin:auto;padding:18px 16px 42px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:24px}.brand{display:flex;align-items:center;gap:11px}.mark{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--gold),#ff9300);display:grid;place-items:center;color:#241500;font-family:'Bebas Neue';font-size:23px;transform:rotate(-3deg);box-shadow:0 10px 26px rgba(255,210,63,.25)}h1,h2{font-family:'Bebas Neue',sans-serif;letter-spacing:.03em}.brand h1{margin:0;font-size:29px;line-height:.9}.brand h1 span{color:var(--gold)}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-top:4px}.room-pill{font-size:12px;font-weight:700;padding:8px 11px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.05)}.card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 22px 60px rgba(0,0,0,.35)}.hero{margin:42px 0 28px;max-width:740px}.hero h2{font-size:clamp(52px,9vw,86px);line-height:.88;margin:0}.hero h2 span{color:var(--gold);text-shadow:0 0 28px rgba(255,210,63,.35)}.hero p{color:var(--muted);font-size:16px;line-height:1.55;max-width:580px}.home-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:820px}.card h3{font-size:18px;margin:0 0 5px}.card p{font-size:13px;line-height:1.5;color:var(--muted);margin:0 0 14px}.form{display:grid;gap:10px}.input{width:100%;padding:13px 14px;border-radius:11px;background:rgba(0,0,0,.25);border:1px solid var(--line);color:var(--ink);outline:0;font-weight:600}.input:focus{border-color:rgba(255,210,63,.55);box-shadow:0 0 0 3px rgba(255,210,63,.1)}.btn{border:0;border-radius:11px;padding:12px 15px;font-weight:700;color:var(--ink);background:rgba(255,255,255,.08);transition:.15s}.btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.12)}.btn.primary{background:linear-gradient(135deg,var(--gold),#ff9800);color:#211300}.btn.danger{color:#ff9494;border:1px solid rgba(255,100,100,.25)}.btn:disabled{opacity:.4;cursor:not-allowed;transform:none}.error{min-height:16px;color:var(--red);font-size:12px;font-weight:600}.lobby-head,.game-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:14px}.title{font-size:40px;margin:0;line-height:1}.sub{color:var(--muted);font-size:12px;margin-top:4px}.actions{display:flex;gap:8px;flex-wrap:wrap}.players{display:grid;gap:8px;margin-top:12px}.player{display:flex;align-items:center;justify-content:space-between;padding:10px 11px;border:1px solid var(--line);border-radius:11px;background:rgba(255,255,255,.035)}.player-left{display:flex;align-items:center;gap:9px}.avatar{width:34px;height:34px;border-radius:10px;background:#34344a;display:grid;place-items:center;font-weight:700}.online{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green)}.offline{background:#555;box-shadow:none}.lobby-grid,.game-grid{display:grid;grid-template-columns:minmax(0,1fr) 285px;gap:14px}.invite{word-break:break-all;color:var(--cyan);font-size:12px}.simple-note{padding:13px;border-radius:11px;background:rgba(255,210,63,.08);border:1px solid rgba(255,210,63,.2);font-size:13px;color:#f6eab7;line-height:1.5}.status{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border-radius:13px;background:linear-gradient(90deg,rgba(255,61,154,.13),rgba(255,210,63,.08));border:1px solid rgba(255,61,154,.2)}.status strong{font-size:13px}.status small{display:block;color:var(--muted);font-size:11px;margin-top:3px}.vote-count{white-space:nowrap;border:1px solid var(--line);border-radius:999px;padding:7px 10px;font-size:11px;font-weight:700}.vote-count b{color:var(--gold)}.main{display:grid;gap:13px}.quote-card{text-align:center;padding:30px 20px;min-height:205px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}.quote-card:before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0,rgba(255,210,63,.09),transparent 55%);pointer-events:none}.eyebrow{font-size:10px;letter-spacing:.2em;color:var(--gold);font-weight:700;margin-bottom:14px}.quote{font-size:clamp(22px,4vw,36px);font-weight:700;line-height:1.25;letter-spacing:-.025em;white-space:pre-wrap;position:relative}.options{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.option{border:1px solid var(--line);border-radius:13px;padding:12px 7px;background:rgba(255,255,255,.045);color:var(--ink);text-align:center}.option:hover{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.08)}.option.picked{border-color:var(--gold);background:rgba(255,210,63,.12);box-shadow:0 0 0 2px rgba(255,210,63,.12)}.option:disabled{cursor:default}.option .avatar{margin:auto auto 7px;width:40px;height:40px}.option strong{display:block;font-size:13px}.option small{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.reveal{text-align:center;background:linear-gradient(135deg,rgba(255,210,63,.12),rgba(255,61,154,.09))}.reveal h2{font-size:44px;margin:2px 0 0;color:var(--gold)}.timestamp{font-size:12px;color:var(--muted)}.reactions{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:12px}.reaction{border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.055);color:var(--ink);padding:7px 10px}.reaction.on{border-color:var(--gold);background:rgba(255,210,63,.11)}.context{display:grid;gap:7px}.bubble{max-width:92%;padding:10px 12px;border-radius:13px;border:1px solid var(--line);background:rgba(255,255,255,.05);font-size:13px;line-height:1.45}.bubble.mine{margin-left:auto;background:#123023;border-color:rgba(54,216,117,.25);box-shadow:0 0 0 2px var(--gold)}.bubble small{display:block;color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.09em;font-weight:700;margin-bottom:3px}.side{display:grid;gap:12px;align-content:start}.side h3{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);margin:0 0 9px}.score-row{display:flex;align-items:center;justify-content:space-between;padding:8px 9px;border-radius:9px;background:rgba(255,255,255,.04);margin-top:6px;font-size:12px}.score-row.me{border:1px solid rgba(255,210,63,.32)}.score-row b:last-child{color:var(--gold)}.history{display:grid;gap:6px}.history-row{font-size:11px;padding:8px;border:1px solid var(--line);border-radius:9px;color:var(--muted)}.history-row b{color:var(--ink)}.empty{color:#69667a;font-size:11px}.finished{text-align:center;padding:28px}.finished h2{font-size:48px;margin:0;color:var(--gold)}.footer{text-align:center;color:#666277;font-size:10px;margin-top:24px}.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);padding:10px 14px;border-radius:999px;background:#29283b;border:1px solid var(--line);font-size:12px;z-index:50;box-shadow:0 15px 40px rgba(0,0,0,.45)}
+.context-preview{display:grid;gap:8px;padding:14px;background:rgba(53,233,245,.035);border:1px solid rgba(53,233,245,.16);border-radius:15px}.context-preview h3{margin:0 0 2px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan)}.context-divider{text-align:center;color:var(--gold);font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:2px}.vote-lock{width:100%;font-size:15px;padding:14px}.bubble.before{margin-right:auto}.bubble.after{margin-left:auto}.bubble.after small{text-align:right}
+@media(max-width:800px){.home-grid,.lobby-grid,.game-grid{grid-template-columns:1fr}.side{grid-template-columns:1fr 1fr}.options{grid-template-columns:repeat(2,1fr)}.hero{margin-top:24px}.lobby-head,.game-head{align-items:center}.quote-card{min-height:180px}.top{margin-bottom:14px}}
+@media(max-width:480px){.shell{padding:12px 11px 32px}.brand h1{font-size:25px}.mark{width:38px;height:38px}.side{grid-template-columns:1fr}.home-grid{gap:10px}.card{padding:14px}.quote-card{padding:24px 14px}.options{gap:7px}.option{padding:10px 5px}.lobby-head,.game-head{display:block}.actions{margin-top:10px}.room-pill{display:none}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <header class="top">
+    <div class="brand"><div class="mark">W?</div><div><h1>WHO SAID <span>THAT?</span></h1><small>Shady archive</small></div></div>
+    <div id="roomPill" class="room-pill hidden">ROOM <b id="roomCode">—</b></div>
+  </header>
+
+  <main id="homeView">
+    <section class="hero"><h2>THE GROUP CHAT<br><span>ON TRIAL</span></h2><p>Real messages. Hidden senders. Guess, reveal, remember. No setup menus and no artificial round limit.</p></section>
+    <section class="home-grid">
+      <div class="card"><h3>Create a room</h3><p>Start a lobby and share the four-letter code.</p><div class="form"><input id="createName" class="input" maxlength="18" placeholder="Your name"><button id="createBtn" class="btn primary">Create room</button><div id="createError" class="error"></div></div></div>
+      <div class="card"><h3>Join a room</h3><p>Enter the code your host sent.</p><div class="form"><input id="joinCode" class="input" maxlength="4" placeholder="Room code" style="text-transform:uppercase;text-align:center;letter-spacing:.2em"><input id="joinName" class="input" maxlength="18" placeholder="Your name"><button id="joinBtn" class="btn">Join room</button><div id="joinError" class="error"></div></div></div>
+    </section>
+  </main>
+
+  <main id="lobbyView" class="hidden">
+    <div class="lobby-head"><div><h2 class="title">ROOM <span id="lobbyCode" style="color:var(--gold)">—</span></h2><div class="sub"><span id="quoteCount">—</span> quotes · all available authors appear every round</div></div><div class="actions"><button id="copyBtn" class="btn">Copy invite</button><button id="startBtn" class="btn primary">Start</button></div></div>
+    <div class="lobby-grid">
+      <section class="card"><h3>Players</h3><div id="players" class="players"></div></section>
+      <aside class="card"><h3>Ready</h3><div class="simple-note">That’s the whole setup. When at least two people are connected, the host presses Start.</div><p style="margin-top:13px">Invite</p><div id="inviteLink" class="invite"></div><button id="leaveLobbyBtn" class="btn danger" style="width:100%;margin-top:14px">Leave room</button></aside>
+    </div>
+  </main>
+
+  <main id="gameView" class="hidden">
+    <div class="game-head"><div><h2 class="title">ROUND <span id="roundNumber" style="color:var(--gold)">1</span></h2></div><div class="actions"><button id="revealBtn" class="btn hidden">Reveal now</button><button id="nextBtn" class="btn primary hidden">Next quote</button><button id="endBtn" class="btn danger hidden">End game</button></div></div>
+    <div class="game-grid">
+      <div class="main">
+        <div class="status"><div><strong id="statusTitle">Vote privately</strong><small id="statusText">Nobody can see your answer yet.</small></div><div class="vote-count"><b id="votedCount">0</b>/<span id="requiredCount">0</span> voted</div></div>
+        <section id="quoteCard" class="card quote-card"><div class="eyebrow" id="eyebrow">WHO SAID THIS?</div><div id="quoteText" class="quote">Loading…</div></section>
+        <section id="contextPreview" class="context-preview hidden"></section>
+        <section id="options" class="options"></section>
+        <button id="lockVoteBtn" class="btn primary vote-lock hidden" disabled>Lock in</button>
+        <section id="revealArea" class="hidden main"><div class="card reveal"><div class="eyebrow">IT WAS</div><h2 id="revealName">—</h2><div id="timestamp" class="timestamp"></div><div class="reactions"><button class="reaction" data-reaction="😂">😂 <span>0</span></button><button class="reaction" data-reaction="💀">💀 <span>0</span></button><button class="reaction" data-reaction="😭">😭 <span>0</span></button><button class="reaction" data-reaction="🧢">🧢 <span>0</span></button><button id="favoriteBtn" class="reaction">★ Iconic <span>0</span></button></div></div><div id="context" class="context"></div><div id="voteTally" class="card" style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center"></div></section>
+        <section id="finishedArea" class="card finished hidden"><h2>GAME OVER</h2><p>Scores are final for this room.</p><div id="finalScores"></div><button id="restartBtn" class="btn primary" style="margin-top:14px">Back to lobby</button></section>
+      </div>
+      <aside class="side">
+        <section class="card"><h3>Leaderboard</h3><div id="scores"></div></section>
+        <section class="card"><h3>Recent rounds</h3><div id="history" class="history"><div class="empty">Nothing yet</div></div></section>
+        <section class="card"><h3>Hall of Fame</h3><div id="hall"><div class="empty">Favorite revealed quotes to add them here.</div></div></section>
+      </aside>
+    </div>
+  </main>
+  <div class="footer">Every quote comes from the original archive.</div>
+</div>
+<div id="toast" class="toast hidden"></div>
+<script>
+const $ = id => document.getElementById(id);
+const firstSegment = '/' + (location.pathname.split('/').filter(Boolean)[0] || '');
+const BASE = ['/whosaidthat','/shady'].includes(firstSegment) ? firstSegment : '';
+const SESSION_KEY = 'wst_session_v4';
+localStorage.removeItem('wst_session_v3');
+let session = JSON.parse(localStorage.getItem(SESSION_KEY) || 'null');
+let socket = null;
+let state = null;
+let reconnectTimer = null;
+let draftQuoteId = null;
+let draftGuess = null;
+
+function toast(message){ const el=$('toast'); el.textContent=message; el.classList.remove('hidden'); clearTimeout(el._t); el._t=setTimeout(()=>el.classList.add('hidden'),1800); }
+function esc(value){ return String(value ?? '').replace(/[&<>\"]/g, ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[ch])); }
+async function api(path, options={}){
+  const response = await fetch(BASE+path, {headers:{'Content-Type':'application/json'}, ...options});
+  const text = await response.text();
+  let data = {};
+  try { data = text ? JSON.parse(text) : {}; } catch { throw new Error(`Server returned ${response.status}`); }
+  if(!response.ok) throw new Error(data.detail || `Request failed (${response.status})`);
+  return data;
+}
+function saveSession(data){ session={room:data.room,token:data.token}; localStorage.setItem(SESSION_KEY,JSON.stringify(session)); connect(); }
+function clearSession(){ session=null; state=null; draftQuoteId=null; draftGuess=null; localStorage.removeItem(SESSION_KEY); clearTimeout(reconnectTimer); if(socket){ const old=socket; socket=null; old.close(); } location.href=BASE||'/'; }
+
+$('createBtn').onclick=async()=>{ const name=$('createName').value.trim(); $('createError').textContent=''; if(!name){$('createError').textContent='Enter your name';return;} $('createBtn').disabled=true; try{saveSession(await api('/api/rooms',{method:'POST',body:JSON.stringify({name})}));}catch(e){$('createError').textContent=e.message;}finally{$('createBtn').disabled=false;} };
+$('joinBtn').onclick=async()=>{ const code=$('joinCode').value.trim().toUpperCase(),name=$('joinName').value.trim(); $('joinError').textContent=''; if(code.length!==4||!name){$('joinError').textContent='Enter a four-letter code and your name';return;} $('joinBtn').disabled=true; try{saveSession(await api(`/api/rooms/${code}/join`,{method:'POST',body:JSON.stringify({name})}));}catch(e){$('joinError').textContent=e.message;}finally{$('joinBtn').disabled=false;} };
+
+function connect(){
+  if(!session) return;
+  clearTimeout(reconnectTimer);
+  const protocol=location.protocol==='https:'?'wss':'ws';
+  socket=new WebSocket(`${protocol}://${location.host}${BASE}/ws/${session.room}`);
+  socket.onopen=()=>socket.send(JSON.stringify({action:'authenticate',token:session.token}));
+  socket.onmessage=event=>{ const message=JSON.parse(event.data); if(message.type==='error') toast(message.message); else if(message.type==='state'){state=message;render();} };
+  socket.onclose=event=>{ if(event.code===4404){ clearSession(); return; } if(event.code===4001){session=null;toast('Room opened in another tab');return;} if(session) reconnectTimer=setTimeout(connect,1600); };
+}
+function send(action){ if(socket?.readyState===WebSocket.OPEN) socket.send(JSON.stringify(action)); else toast('Reconnecting…'); }
+
+function render(){
+  const phase=state.phase;
+  $('homeView').classList.add('hidden');
+  $('lobbyView').classList.toggle('hidden',phase!=='lobby');
+  $('gameView').classList.toggle('hidden',!['voting','reveal','finished'].includes(phase));
+  $('roomPill').classList.remove('hidden'); $('roomCode').textContent=state.room;
+  if(phase==='lobby') renderLobby(); else renderGame();
+}
+function renderLobby(){
+  $('lobbyCode').textContent=state.room; $('quoteCount').textContent=state.quotes_total;
+  const link=`${location.origin}${BASE}/#${state.room}`; $('inviteLink').textContent=link;
+  $('players').innerHTML=state.players.map(p=>`<div class="player"><div class="player-left"><div class="avatar">${esc(p.name[0]?.toUpperCase())}</div><div><b>${esc(p.name)}</b>${p.host?' <small style="color:var(--gold)">HOST</small>':''}<div class="sub">${p.connected?'connected':'disconnected'}</div></div></div><span class="online ${p.connected?'':'offline'}"></span></div>`).join('');
+  $('startBtn').disabled=!state.is_host||state.players.filter(p=>p.connected).length<2;
+  $('startBtn').textContent=state.is_host?'Start game':'Waiting for host';
+  $('startBtn').onclick=()=>send({action:'start_game'});
+  $('copyBtn').onclick=async()=>{try{await navigator.clipboard.writeText(link);toast('Invite copied');}catch{toast(link);}};
+  $('leaveLobbyBtn').onclick=clearSession;
+}
+function renderGame(){
+  $('roundNumber').textContent=state.round_number;
+  renderScores('scores'); renderHistory(); renderHall();
+  const isVoting=state.phase==='voting', isReveal=state.phase==='reveal', isFinished=state.phase==='finished';
+  $('quoteCard').classList.toggle('hidden',isFinished); $('contextPreview').classList.toggle('hidden',!isVoting); $('options').classList.toggle('hidden',!isVoting); $('lockVoteBtn').classList.toggle('hidden',!isVoting); $('revealArea').classList.toggle('hidden',!isReveal); $('finishedArea').classList.toggle('hidden',!isFinished);
+  if(isFinished){ $('statusTitle').textContent='Game ended'; $('statusText').textContent='Scores are final for this room.'; $('votedCount').textContent='—'; $('requiredCount').textContent='—'; renderScores('finalScores'); $('restartBtn').classList.toggle('hidden',!state.is_host); $('restartBtn').onclick=()=>send({action:'restart'}); $('revealBtn').classList.add('hidden'); $('nextBtn').classList.add('hidden'); $('endBtn').classList.add('hidden'); return; }
+  const current=state.current; if(!current) return;
+  $('quoteText').textContent=`“${current.text}”`; $('eyebrow').textContent=isReveal?'THE QUOTE':'WHO SAID THIS?';
+  $('votedCount').textContent=state.voted_count; $('requiredCount').textContent=state.required_voters;
+  $('endBtn').classList.toggle('hidden',!state.is_host); $('endBtn').onclick=()=>send({action:'end_game'});
+  if(isVoting){
+    syncDraft(current); renderContextPreview(current); renderVoteOptions();
+    $('statusTitle').textContent=state.my_vote?'Vote locked':draftGuess?'Answer selected':'Vote privately'; $('statusText').textContent=state.my_vote?`You locked in ${state.my_vote}. Waiting for everyone else.`:draftGuess?`Selected ${draftGuess}. Change it or lock in.`:'Choose an answer, then lock it in.';
+    $('revealBtn').classList.toggle('hidden',!state.is_host); $('revealBtn').disabled=state.voted_count===0; $('revealBtn').onclick=()=>send({action:'reveal'}); $('nextBtn').classList.add('hidden');
+  } else {
+    $('statusTitle').textContent=`It was ${current.sender}`; const last=state.history[state.history.length-1]; $('statusText').textContent=`${last?.correct||0}/${last?.total||0} votes were correct.`;
+    $('revealName').textContent=current.sender; $('timestamp').textContent=current.timestamp||'';
+    $('context').innerHTML=[...(current.contextBefore||[]).map((c,i)=>bubble(c,`Earlier ${i+1}`,'before')),bubble({text:current.text},'Original quote','mine'),...(current.contextAfter||[]).map((c,i)=>bubble(c,`Later ${i+1}`,'after'))].join('');
+    const tally={}; Object.values(state.votes).forEach(name=>tally[name]=(tally[name]||0)+1); $('voteTally').innerHTML=state.answer_options.map(name=>`<span style="padding:6px 9px;border:1px solid ${name===current.sender?'var(--green)':'var(--line)'};border-radius:999px;font-size:11px;color:${name===current.sender?'var(--green)':'var(--muted)'}">${esc(name)} ${tally[name]||0}</span>`).join('');
+    document.querySelectorAll('[data-reaction]').forEach(button=>{const emoji=button.dataset.reaction;button.querySelector('span').textContent=state.reactions[emoji]||0;button.onclick=()=>send({action:'react',emoji});});
+    $('favoriteBtn').classList.toggle('on',state.has_favorited); $('favoriteBtn').querySelector('span').textContent=state.favorite_count; $('favoriteBtn').onclick=()=>send({action:'favorite'});
+    $('revealBtn').classList.add('hidden'); $('nextBtn').classList.toggle('hidden',!state.is_host); $('nextBtn').onclick=()=>send({action:'next_round'});
+  }
+}
+function syncDraft(current){if(draftQuoteId!==current.id){draftQuoteId=current.id;draftGuess=null;}if(state.my_vote)draftGuess=state.my_vote;}
+function renderContextPreview(current){const before=(current.contextBefore||[]).map((c,i)=>bubble(c,`Earlier ${i+1}`,'before'));const after=(current.contextAfter||[]).map((c,i)=>bubble(c,`Later ${i+1}`,'after'));$('contextPreview').innerHTML=`<h3>Anonymous context · two before and two after</h3>${before.join('')}<div class="context-divider">Mystery quote above</div>${after.join('')}`;}
+function renderVoteOptions(){$('options').innerHTML=state.answer_options.map(name=>{const meta=state.sender_meta[name],picked=draftGuess===name;return `<button class="option ${picked?'picked':''}" data-name="${esc(name)}" ${state.my_vote?'disabled':''}><div class="avatar" style="background:${meta.color}">${esc(meta.initial)}</div><strong>${esc(name)}</strong><small>${state.my_vote&&picked?'locked':picked?'selected':'choose'}</small></button>`}).join('');document.querySelectorAll('.option').forEach(button=>button.onclick=()=>{if(state.my_vote)return;draftGuess=button.dataset.name;renderVoteOptions();});const lock=$('lockVoteBtn');lock.disabled=!draftGuess||!!state.my_vote;lock.textContent=state.my_vote?'Locked in':draftGuess?`Lock in ${draftGuess}`:'Choose an answer';lock.onclick=()=>{if(draftGuess&&!state.my_vote)send({action:'vote',guess:draftGuess});};}
+function bubble(message,label,kind=''){return `<div class="bubble ${kind}"><small>${esc(label)}</small>${esc(message.text)}</div>`;}
+function renderScores(id){const el=$(id),sorted=[...state.players].sort((a,b)=>b.score-a.score);el.innerHTML=sorted.map((p,i)=>`<div class="score-row ${p.id===state.viewer?'me':''}"><span>${i+1}. <b>${esc(p.name)}</b>${p.streak>=3?` · ${p.streak} streak`:''}</span><b>${p.score}</b></div>`).join('');}
+function renderHistory(){const el=$('history');if(!state.history.length){el.innerHTML='<div class="empty">Nothing yet</div>';return;}el.innerHTML=[...state.history].reverse().map(h=>`<div class="history-row">R${h.round} · <b>${esc(h.sender)}</b> · ${h.correct}/${h.total} correct</div>`).join('');}
+function renderHall(){const el=$('hall');if(!state.hall_of_fame.length){el.innerHTML='<div class="empty">Favorite revealed quotes to add them here.</div>';return;}el.innerHTML=state.hall_of_fame.map((h,i)=>`<div class="history-row"><b>#${i+1} ${esc(h.sender)}</b> · ★ ${h.favorites}<br>“${esc(h.text)}”</div>`).join('');}
+
+if(location.hash){const code=location.hash.slice(1).trim().toUpperCase();if(code.length===4)$('joinCode').value=code;}
+if(session) connect();
+</script>
+</body>
+</html>

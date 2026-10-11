@@ -1,0 +1,16 @@
+[
+  {"id":"lose-property","title":"Property scandal","description":"Choose one property to lose to the bank.","effectType":"choose_lose_property","weight":8},
+  {"id":"foreclosure","title":"Foreclosure notice","description":"Your cheapest property returns to the bank.","effectType":"lose_cheapest_property","weight":6},
+  {"id":"repairs","title":"Unexpected repairs","description":"Pay $40 per building you own.","effectType":"pay_per_building","value":40,"weight":7},
+  {"id":"city-festival","title":"City festival","description":"Collect $30 per city you own.","effectType":"receive_per_city","value":30,"weight":7},
+  {"id":"bank-error","title":"Bank error","description":"Collect $150.","effectType":"receive_cash","value":150,"weight":8},
+  {"id":"speeding-fine","title":"Speeding fine","description":"Pay $80.","effectType":"pay_cash","value":80,"weight":7},
+  {"id":"move-start","title":"Fast track","description":"Move to Start and receive salary.","effectType":"move_to_start","weight":4},
+  {"id":"free-ride","title":"Free ride","description":"Advance 3 spaces, then resolve the landing.","effectType":"move_relative","value":3,"weight":5},
+  {"id":"jail","title":"Legal trouble","description":"Go directly to Jail.","effectType":"go_to_jail","weight":4},
+  {"id":"building-repairs","title":"Major repairs","description":"Pay $60 per building you own.","effectType":"pay_per_building","value":60,"weight":5},
+  {"id":"market-dip","title":"Market dip","description":"Pay $50 per property you own.","effectType":"pay_per_property","value":50,"weight":4},
+  {"id":"auction-win","title":"Auction windfall","description":"Collect $120.","effectType":"receive_cash","value":120,"weight":5},
+  {"id":"gift-property","title":"Property raffle","description":"Receive a random unowned property, if one exists.","effectType":"gift_property","weight":3},
+  {"id":"birthday","title":"Celebration","description":"Collect $200.","effectType":"receive_cash","value":200,"weight":3}
+]

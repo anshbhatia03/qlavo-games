@@ -1,0 +1,167 @@
+# 165-man pool (PL minutes 2010+) — hidden ratings. ovr = peak fit.
+# Columns: NAME|POS|NAT|CLUB|ERA|HT|WT|PACE|OVR|FIT_JSON|BACK3|NOTE
+Kevin De Bruyne|CAM|Belgium|Manchester City|B|181|70|76|92|{"CAM":92,"CM":89,"RW":88,"CDM":71,"GK":4,"RB":42,"LB":42,"CB":34,"LW":72,"ST":65}|0|2017-2021 best midfielder in the world
+Christian Eriksen|CAM|Denmark|Tottenham|B|182|76|73|88|{"CAM":88,"CM":85,"RW":80,"GK":4,"RB":40,"LB":40,"CB":34,"CDM":57,"LW":69,"ST":62}|0|2015-2020 Spurs creative hub
+Bruno Fernandes|CAM|Portugal|Manchester United|C|179|72|72|88|{"CAM":88,"CM":84,"GK":4,"RB":40,"LB":40,"CB":34,"CDM":57,"LW":69,"RW":69,"ST":62}|0|2020 arrival, instant Utd talisman
+Bernardo Silva|CAM|Portugal|Manchester City|B|173|64|81|87|{"CAM":87,"RW":87,"CM":86,"LW":85,"RB":72,"GK":4,"LB":40,"CB":33,"CDM":57,"ST":62}|0|2018-19 City POTY
+Mesut Özil|CAM|Germany|Arsenal|B|180|76|70|87|{"CAM":87,"CM":82,"RW":78,"GK":4,"RB":40,"LB":40,"CB":33,"CDM":57,"LW":68,"ST":62}|0|2015-16 19 assists,assist king
+Philippe Coutinho|CAM|Brazil|Liverpool|B|172|68|76|86|{"CAM":86,"LW":84,"CM":82,"GK":4,"RB":40,"LB":40,"CB":33,"CDM":56,"RW":68,"ST":61}|0|2014-17 Liverpool magician
+Dele Alli|CAM|England|Tottenham|B|188|80|72|85|{"CAM":85,"CM":82,"ST":76,"GK":4,"RB":40,"LB":40,"CB":33,"CDM":56,"LW":67,"RW":67}|0|2016-17 wonderkid, PFA Young Player
+Dimitri Payet|CAM|France|West Ham|B|175|74|76|84|{"CAM":84,"LW":80,"GK":4,"RB":39,"LB":39,"CB":33,"CDM":55,"CM":71,"RW":66,"ST":60}|0|2015-16 West Ham hero, France Euro 2016
+Gylfi Sigurðsson|CAM|Iceland|Everton|B|186|76|68|83|{"CAM":83,"CM":80,"GK":4,"RB":39,"LB":39,"CB":33,"CDM":55,"LW":65,"RW":65,"ST":59}|0|Set-piece specialist, Swansea 2014-16
+Santi Cazorla|CAM|Spain|Arsenal|B|168|66|72|83|{"CAM":83,"CM":82,"LW":80,"GK":4,"RB":39,"LB":39,"CB":33,"CDM":55,"RW":65,"ST":59}|0|Two-footed magician, 2014 FA Cup
+Henrikh Mkhitaryan|CAM|Armenia|Manchester United|B|178|72|80|82|{"CAM":82,"RW":82,"GK":4,"RB":39,"LB":39,"CB":32,"CDM":54,"CM":70,"LW":65,"ST":58}|0|2017 Europa League final goal
+Manuel Lanzini|CAM|Argentina|West Ham|B|167|63|80|81|{"CAM":81,"LW":76,"GK":4,"RB":38,"LB":38,"CB":32,"CDM":54,"CM":69,"RW":64,"ST":58}|0|West Ham magician 2016+
+Jesse Lingard|CAM|England|Manchester United|B|175|66|82|81|{"CAM":81,"RW":81,"GK":4,"RB":38,"LB":38,"CB":32,"CDM":54,"CM":69,"LW":64,"ST":58}|0|2018 FA Cup winner, 2020 West Ham loan revival
+Mason Mount|CAM|England|Chelsea|C|178|64|71|81|{"CAM":81,"CM":79,"GK":4,"RB":38,"LB":38,"CB":32,"CDM":54,"LW":64,"RW":64,"ST":58}|0|Chelsea academy, 2021 CL
+Ross Barkley|CAM|England|Chelsea|B|188|83|74|80|{"CAM":80,"CM":78,"GK":4,"RB":38,"LB":38,"CB":32,"CDM":53,"LW":63,"RW":63,"ST":57}|0|Everton 2014-16 peak
+Virgil van Dijk|CB|Netherlands|Liverpool|B|193|92|77|92|{"CB":92,"GK":6,"RB":63,"LB":63,"CDM":65,"CM":49,"CAM":36,"LW":35,"RW":35,"ST":34}|1|Transformed Liverpool, 2019 Ballon d'Or runner-up
+Aymeric Laporte|CB|France|Manchester City|B|191|85|68|87|{"CB":87,"LB":82,"GK":6,"RB":60,"CDM":62,"CM":47,"CAM":35,"LW":33,"RW":33,"ST":32}|1|Pep's left-sided CB, 2018/2019 titles
+Jan Vertonghen|CB|Belgium|Tottenham|B|189|86|63|87|{"CB":87,"LB":82,"CDM":76,"GK":6,"RB":60,"CM":47,"CAM":35,"LW":32,"RW":32,"ST":31}|3|2016-19 Spurs wall
+Toby Alderweireld|CB|Belgium|Tottenham|B|186|81|64|87|{"CB":87,"RB":74,"GK":6,"LB":60,"CDM":62,"CM":47,"CAM":35,"LW":32,"RW":32,"ST":31}|2|Vertonghen's partner, 2019 CL final
+Vincent Kompany|CB|Belgium|Manchester City|A|190|85|50|86|{"CB":86,"CDM":78,"RB":76,"GK":6,"LB":60,"CM":46,"CAM":35,"LW":30,"RW":30,"ST":29}|0|2012, 2014, 2018, 2019 titles, captain
+John Stones|CB|England|Manchester City|B|188|70|68|84|{"CB":84,"RB":74,"GK":6,"LB":58,"CDM":60,"CM":46,"CAM":34,"LW":32,"RW":32,"ST":31}|2|Pep's ball-playing project
+Harry Maguire|CB|England|Manchester United|B|194|100|50|84|{"CB":84,"GK":6,"RB":58,"LB":58,"CDM":60,"CM":46,"CAM":34,"LW":30,"RW":30,"ST":29}|1|2019 £80m move, England 2018 WC semi
+Gary Cahill|CB|England|Chelsea|B|193|88|62|84|{"GK":4,"RB":72,"LB":72,"CB":84,"CDM":70,"CM":46,"CAM":34,"LW":32,"RW":32,"ST":30}|2|Chelsea captain, 2 titles + 2012 CL, England 2018 WC
+Joël Matip|CB|Cameroon|Liverpool|B|194|90|61|83|{"CB":83,"GK":6,"RB":58,"LB":58,"CDM":59,"CM":45,"CAM":34,"LW":31,"RW":31,"ST":30}|1|2019 CL winner
+David Luiz|CB|Brazil|Arsenal|B|189|84|64|83|{"CB":83,"CDM":78,"GK":6,"RB":58,"LB":58,"CM":45,"CAM":34,"LW":32,"RW":32,"ST":30}|3|2019-21 Arsenal, unpredictable
+Davinson Sánchez|CB|Colombia|Tottenham|B|187|82|76|82|{"CB":82,"GK":6,"RB":57,"LB":57,"CDM":58,"CM":45,"CAM":34,"LW":33,"RW":33,"ST":32}|1|2017-2023 Spurs
+Sokratis Papastathopoulos|CB|Greece|Arsenal|B|187|82|66|82|{"CB":82,"GK":6,"RB":57,"LB":57,"CDM":58,"CM":45,"CAM":34,"LW":32,"RW":32,"ST":31}|0|Arsenal 2018-2020
+Laurent Koscielny|CB|France|Arsenal|A|186|75|68|82|{"CB":82,"GK":6,"RB":57,"LB":57,"CDM":58,"CM":45,"CAM":34,"LW":32,"RW":32,"ST":31}|1|Arsenal 2010-2019 captain
+Dejan Lovren|CB|Croatia|Liverpool|B|183|82|72|80|{"CB":80,"GK":6,"RB":56,"LB":56,"CDM":57,"CM":44,"CAM":33,"LW":32,"RW":32,"ST":31}|1|2018 WC finalist, 2019 CL winner
+Chris Smalling|CB|England|Manchester United|B|191|88|66|80|{"CB":80,"GK":6,"RB":56,"LB":56,"CDM":57,"CM":44,"CAM":33,"LW":31,"RW":31,"ST":30}|1|"Mike Smalling" under Ferguson
+James Tarkowski|CB|England|Burnley|B|185|80|56|80|{"CB":80,"GK":6,"RB":56,"LB":56,"CDM":57,"CM":44,"CAM":33,"LW":30,"RW":30,"ST":29}|0|Burnley 2016-2022
+Jonny Evans|CB|Northern Ireland|Leicester|B|188|82|56|80|{"CB":80,"GK":6,"RB":56,"LB":56,"CDM":57,"CM":44,"CAM":33,"LW":30,"RW":30,"ST":29}|1|Utd academy, then West Brom, then Leicester CL 2020
+Per Mertesacker|CB|Germany|Arsenal|B|198|85|46|80|{"GK":4,"RB":56,"LB":68,"CB":80,"CDM":57,"CM":44,"CAM":33,"LW":28,"RW":28,"ST":27}|1|2014 WC winner, Arsenal 2011-2018, the BFG
+Robert Huth|CB|Germany|Leicester|B|192|93|52|79|{"GK":4,"RB":66,"LB":55,"CB":79,"CDM":57,"CM":44,"CAM":33,"LW":29,"RW":29,"ST":28}|0|2016 title, Stoke & Leicester wall
+Joleon Lescott|CB|England|Manchester City|A|188|84|58|79|{"GK":4,"RB":55,"LB":74,"CB":79,"CDM":57,"CM":44,"CAM":33,"LW":30,"RW":30,"ST":29}|0|2012 + 2014 City titles
+Phil Jones|CB|England|Manchester United|A|180|71|70|78|{"CB":78,"RB":75,"CDM":74,"GK":6,"LB":55,"CM":43,"CAM":33,"LW":32,"RW":32,"ST":30}|1|Ferguson signed him at 19
+Eric Bailly|CB|Ivory Coast|Manchester United|B|186|77|76|78|{"CB":78,"GK":6,"RB":55,"LB":55,"CDM":56,"CM":43,"CAM":33,"LW":32,"RW":32,"ST":31}|1|Mourinho's 2016 signing
+Wes Morgan|CB|Jamaica|Leicester|B|190|95|50|78|{"GK":4,"RB":68,"LB":55,"CB":78,"CDM":56,"CM":43,"CAM":33,"LW":29,"RW":29,"ST":27}|1|2016 title captain, played every minute
+Sylvain Distin|CB|France|Everton|B|191|88|64|77|{"GK":4,"RB":54,"LB":70,"CB":77,"CDM":55,"CM":43,"CAM":33,"LW":30,"RW":30,"ST":29}|0|Portsmouth then Everton 2009-2015
+Winston Reid|CB|New Zealand|West Ham|B|190|90|58|77|{"CB":77,"RB":70,"CDM":70,"GK":4,"LB":54,"CM":43,"CAM":33,"LW":31,"RW":29,"ST":30}|1|West Ham 2010-2021, 2012 promotion
+James Tomkins|CB|England|Crystal Palace|B|188|85|60|76|{"CB":76,"GK":6,"RB":54,"LB":54,"CDM":55,"CM":42,"CAM":32,"LW":30,"RW":30,"ST":29}|1|West Ham then Palace
+Jamaal Lascelles|CB|England|Newcastle|B|188|85|64|76|{"CB":76,"GK":6,"RB":54,"LB":54,"CDM":55,"CM":42,"CAM":32,"LW":30,"RW":30,"ST":29}|1|Newcastle captain 2017+
+Jannik Vestergaard|CB|Denmark|Southampton|B|199|98|56|76|{"CB":76,"GK":6,"RB":54,"LB":54,"CDM":55,"CM":42,"CAM":32,"LW":29,"RW":29,"ST":28}|1|Giant Dane
+Kolo Touré|CB|Ivory Coast|Manchester City|A|178|76|66|76|{"GK":4,"RB":70,"LB":54,"CB":76,"CDM":72,"CM":42,"CAM":32,"LW":31,"RW":31,"ST":29}|1|Arsenal invincible, City 2009-13
+Christopher Samba|CB|Congo|Blackburn|A|193|95|58|76|{"GK":4,"RB":66,"LB":54,"CB":76,"CDM":55,"CM":42,"CAM":32,"LW":29,"RW":29,"ST":28}|0|Blackburn colossus 2007-2012
+N'Golo Kanté|CDM|France|Chelsea|B|168|72|78|90|{"CDM":90,"CM":87,"RB":72,"GK":5,"LB":55,"CB":63,"CAM":58,"LW":46,"RW":46,"ST":42}|0|2016 Leicester title, 2017 PFA POTY
+Rodri|CDM|Spain|Manchester City|C|191|82|64|90|{"CDM":90,"CM":84,"GK":4,"RB":48,"LB":48,"CB":60,"CAM":52,"LW":38,"RW":38,"ST":34}|0|2020s City metronome
+Fernandinho|CDM|Brazil|Manchester City|B|179|67|72|87|{"CDM":87,"CM":80,"CB":78,"GK":5,"RB":54,"LB":54,"CAM":57,"LW":44,"RW":44,"ST":40}|0|Pep's first lieutenant 2016-2020
+Fabinho|CDM|Brazil|Liverpool|B|188|78|68|86|{"CDM":86,"RB":78,"CB":76,"GK":5,"LB":53,"CM":76,"CAM":56,"LW":43,"RW":43,"ST":40}|0|2019 CL, 2020 PL anchor
+Jordan Henderson|CDM|England|Liverpool|B|182|80|64|84|{"CDM":84,"CM":82,"RB":74,"GK":5,"LB":52,"CB":60,"CAM":55,"LW":42,"RW":42,"ST":38}|0|2019 CL captain, 2020 PL captain
+Idrissa Gueye|CDM|Senegal|Everton|B|174|66|76|83|{"CDM":83,"GK":5,"RB":52,"LB":52,"CB":59,"CM":74,"CAM":55,"LW":43,"RW":43,"ST":40}|0|Tackling machine Everton 2016-19
+Wilfred Ndidi|CDM|Nigeria|Leicester|B|183|74|71|82|{"CDM":82,"GK":5,"RB":51,"LB":51,"CB":58,"CM":73,"CAM":54,"LW":42,"RW":42,"ST":39}|0|Kanté's Leicester successor
+Lucas Torreira|CDM|Uruguay|Arsenal|B|166|66|72|81|{"CDM":81,"GK":5,"RB":50,"LB":50,"CB":58,"CM":72,"CAM":54,"LW":42,"RW":42,"ST":39}|0|2018-20 Arsenal
+Étienne Capoue|CDM|France|Watford|B|188|81|68|80|{"CDM":80,"GK":5,"RB":50,"LB":50,"CB":57,"CM":71,"CAM":53,"LW":41,"RW":41,"ST":38}|0|Watford 2020 FA Cup final
+Steven N'Zonzi|CDM|France|Stoke|B|189|88|56|80|{"GK":4,"RB":50,"LB":50,"CB":57,"CDM":80,"CM":78,"CAM":53,"LW":39,"RW":39,"ST":36}|0|Stoke 2012-15, then Sevilla Europa legend
+Gareth Barry|CDM|England|Manchester City|A|183|83|56|79|{"CDM":79,"CM":78,"GK":5,"RB":50,"LB":50,"CB":57,"CAM":52,"LW":39,"RW":39,"ST":36}|0|Most PL appearances ever (653)
+Eric Dier|CDM|England|Tottenham|B|188|86|66|79|{"CDM":79,"CB":76,"RB":73,"GK":5,"LB":50,"CM":70,"CAM":52,"LW":40,"RW":40,"ST":37}|2|CB converted to CDM
+Moussa Sissoko|CDM|France|Tottenham|B|188|84|76|79|{"CDM":79,"CM":77,"RW":75,"GK":5,"RB":50,"LB":50,"CB":57,"CAM":52,"LW":42,"ST":39}|0|2019 CL final starter
+Cheikhou Kouyaté|CDM|Senegal|West Ham|B|189|85|72|79|{"GK":4,"RB":72,"LB":50,"CB":76,"CDM":79,"CM":76,"CAM":52,"LW":41,"RW":41,"ST":70}|0|West Ham 2014-18 then Palace; played everywhere
+Victor Wanyama|CDM|Kenya|Tottenham|B|189|88|66|78|{"CDM":78,"GK":5,"RB":49,"LB":49,"CB":56,"CM":69,"CAM":52,"LW":40,"RW":40,"ST":37}|0|2016-20 Spurs, huge presence
+Paul Pogba|CM|France|Manchester United|B|191|84|74|88|{"CM":88,"CAM":84,"CDM":82,"LW":76,"GK":5,"RB":51,"LB":51,"CB":47,"RW":57,"ST":47}|0|2018 WC winner, enigma
+David Silva|CM|Spain|Manchester City|B|170|67|68|88|{"CM":88,"CAM":88,"LW":82,"GK":5,"RB":51,"LB":51,"CB":47,"CDM":78,"RW":57,"ST":47}|0|El Mago, 2012/2014/2018/2019 titles
+Yaya Touré|CM|Ivory Coast|Manchester City|A|189|90|74|87|{"GK":4,"RB":50,"LB":50,"CB":47,"CDM":80,"CM":87,"CAM":84,"LW":57,"RW":57,"ST":70}|0|2012/2014 titles, 2014 20-goal season
+İlkay Gündoğan|CM|Germany|Manchester City|B|180|78|64|85|{"CM":85,"CAM":82,"CDM":80,"GK":5,"RB":49,"LB":49,"CB":46,"LW":56,"RW":56,"ST":46}|0|2021 title-winning captain
+Georginio Wijnaldum|CM|Netherlands|Liverpool|B|175|69|77|85|{"CM":85,"CDM":80,"CAM":80,"GK":5,"RB":49,"LB":49,"CB":46,"LW":56,"RW":56,"ST":46}|0|2019 CL, 2020 PL, never injured
+Aaron Ramsey|CM|Wales|Arsenal|B|178|76|76|84|{"CM":84,"CAM":82,"GK":5,"RB":49,"LB":49,"CB":46,"CDM":74,"LW":55,"RW":55,"ST":46}|0|2014 + 2017 FA Cup final winners
+Mateo Kovačić|CM|Croatia|Chelsea|B|178|78|76|83|{"CM":83,"CDM":78,"GK":5,"RB":48,"LB":48,"CB":45,"CAM":70,"LW":55,"RW":55,"ST":45}|0|3x CL at Real, Chelsea 2018+ PL regular
+Michael Carrick|CM|England|Manchester United|B|183|74|56|83|{"GK":4,"RB":48,"LB":48,"CB":45,"CDM":80,"CM":83,"CAM":74,"LW":55,"RW":55,"ST":45}|0|Utd metronome 2006-2018, 2013 title
+Naby Keïta|CM|Guinea|Liverpool|B|172|64|80|82|{"CM":82,"CAM":80,"CDM":76,"GK":5,"RB":48,"LB":48,"CB":45,"LW":54,"RW":54,"ST":45}|0|2018-2023 Liverpool
+James Milner|CM|England|Liverpool|B|175|70|61|82|{"CM":82,"CDM":80,"RB":79,"RW":79,"LW":79,"LB":78,"CAM":74,"GK":5,"CB":45,"ST":45}|2|Milly, played everywhere, 2019 CL
+Adam Lallana|CM|England|Liverpool|B|178|73|67|80|{"CM":80,"CAM":79,"LW":76,"GK":5,"RB":47,"LB":47,"CB":44,"CDM":71,"RW":53,"ST":44}|0|2013-2020 Liverpool, pressing pioneer
+Jack Wilshere|CM|England|Arsenal|A|175|70|70|80|{"CM":80,"CAM":78,"GK":5,"RB":47,"LB":47,"CB":44,"CDM":71,"LW":53,"RW":53,"ST":44}|0|2014 + 2015 FA Cup finals, injury-wrecked
+Jonjo Shelvey|CM|England|Newcastle|B|185|80|62|80|{"CM":80,"CAM":77,"CDM":75,"ST":60,"GK":5,"RB":47,"LB":47,"CB":44,"LW":53,"RW":53}|0|Newcastle 2016-2023, thunderous long shots
+Tom Cleverley|CM|England|Manchester United|A|175|67|70|78|{"CM":78,"CDM":75,"CAM":74,"GK":5,"RB":46,"LB":46,"CB":43,"LW":52,"RW":52,"ST":43}|0|Utd 2010-2015, England caps, later Watford
+Tom Davies|CM|England|Everton|B|178|70|74|74|{"CM":74,"CAM":72,"GK":5,"RB":44,"LB":44,"CB":42,"CDM":66,"LW":50,"RW":50,"ST":42}|0|Everton academy
+Alisson|GK|Brazil|Liverpool|C|191|91||91|{"GK":91,"RB":31,"LB":31,"CB":38,"CDM":27,"CM":26,"CAM":24,"LW":23,"RW":23,"ST":23}|0|Ball-playing elite, 2018 CL winner
+David de Gea|GK|Spain|Manchester United|B|192|78||90|{"GK":90,"RB":30,"LB":30,"CB":38,"CDM":27,"CM":26,"CAM":24,"LW":23,"RW":23,"ST":23}|0|2014-18 best keeper in the world, 4x Player of the Year at Utd
+Thibaut Courtois|GK|Belgium|Chelsea|B|199|96||89|{"GK":89,"RB":30,"LB":30,"CB":37,"CDM":27,"CM":26,"CAM":23,"LW":23,"RW":23,"ST":23}|0|At his Chelsea peak 2014-17, twice Golden Glove
+Hugo Lloris|GK|France|Tottenham|B|188|82||87|{"GK":87,"RB":30,"LB":30,"CB":37,"CDM":27,"CM":25,"CAM":23,"LW":23,"RW":23,"ST":23}|0|Captain, France WC finalist 2018 (won it)
+Kasper Schmeichel|GK|Denmark|Leicester|B|189|89||84|{"GK":84,"RB":30,"LB":30,"CB":36,"CDM":26,"CM":25,"CAM":23,"LW":23,"RW":23,"ST":23}|0|2016 miracle title
+Joe Hart|GK|England|Manchester City|B|196|91||82|{"GK":82,"RB":29,"LB":29,"CB":36,"CDM":26,"CM":25,"CAM":23,"LW":22,"RW":22,"ST":22}|0|Pep froze him out but 2012-16 was elite
+Jordan Pickford|GK|England|Everton|B|183|79||82|{"GK":82,"RB":29,"LB":29,"CB":36,"CDM":26,"CM":25,"CAM":23,"LW":22,"RW":22,"ST":22}|0|England #1, 2018 WC semi
+Bernd Leno|GK|Germany|Arsenal|B|190|82||81|{"GK":81,"RB":29,"LB":29,"CB":35,"CDM":26,"CM":25,"CAM":23,"LW":22,"RW":22,"ST":22}|0|Good keeper in bad Arsenal teams
+Nick Pope|GK|England|Burnley|B|191|82||80|{"GK":80,"RB":29,"LB":29,"CB":35,"CDM":26,"CM":25,"CAM":23,"LW":22,"RW":22,"ST":22}|0|Burnley wall 2018-20
+Tom Heaton|GK|England|Burnley|B|188|80||77|{"GK":77,"RB":29,"LB":29,"CB":34,"CDM":26,"CM":25,"CAM":23,"LW":22,"RW":22,"ST":22}|0|Late bloomer, England cap 2019
+Andrew Robertson|LB|Scotland|Liverpool|B|178|64|85|87|{"LB":87,"LW":76,"GK":6,"RB":75,"CB":60,"CDM":54,"CM":50,"CAM":43,"RW":59,"ST":39}|0|Best LB of era, 2019 CL
+Aleksandar Kolarov|LB|Serbia|Manchester City|A|187|80|76|85|{"LB":85,"CB":76,"GK":6,"RB":73,"CDM":52,"CM":49,"CAM":43,"LW":57,"RW":57,"ST":37}|0|Thunder left foot, free kicks
+Luke Shaw|LB|England|Manchester United|B|185|75|82|82|{"LB":82,"GK":6,"RB":71,"CB":57,"CDM":51,"CM":48,"CAM":42,"LW":56,"RW":56,"ST":37}|0|2014 wonderkid, near-fatal leg break 2015
+Danny Rose|LB|England|Tottenham|B|170|66|80|81|{"LB":81,"LW":72,"GK":6,"RB":70,"CB":57,"CDM":50,"CM":47,"CAM":41,"RW":55,"ST":37}|0|2016-17 PFA TOTS, career derailed by injuries
+Marcos Alonso|LB|Spain|Chelsea|B|188|85|68|81|{"LB":81,"LW":78,"GK":6,"RB":70,"CB":57,"CDM":50,"CM":47,"CAM":41,"RW":53,"ST":35}|0|2017 title wingback, 4 goals that season
+Leighton Baines|LB|England|Everton|B|170|66|66|80|{"LB":80,"LW":76,"GK":6,"RB":69,"CB":56,"CDM":50,"CM":47,"CAM":41,"RW":52,"ST":34}|0|Set-piece god, 2010-2020 Everton
+Ben Chilwell|LB|England|Leicester|C|178|70|80|80|{"LB":80,"GK":6,"RB":69,"CB":56,"CDM":50,"CM":47,"CAM":41,"LW":54,"RW":54,"ST":36}|0|Leicester 2016-20 then Chelsea
+Christian Fuchs|LB|Austria|Leicester|B|185|80|70|80|{"LB":80,"CB":75,"GK":6,"RB":69,"CDM":50,"CM":47,"CAM":41,"LW":53,"RW":53,"ST":35}|0|2016 title leader, "No Fuchs Given"
+Nacho Monreal|LB|Spain|Arsenal|B|179|72|72|79|{"LB":79,"CB":76,"GK":6,"RB":68,"CDM":50,"CM":47,"CAM":41,"LW":53,"RW":53,"ST":35}|0|Mr. Reliable 2013-19
+Ryan Bertrand|LB|England|Southampton|B|178|70|74|79|{"LB":79,"LW":75,"GK":6,"RB":68,"CB":55,"CDM":50,"CM":47,"CAM":41,"RW":53,"ST":35}|0|2012 CL final winner with Chelsea
+Patrick van Aanholt|LB|Netherlands|Crystal Palace|B|176|66|85|78|{"LB":78,"GK":6,"RB":68,"CB":55,"CDM":49,"CM":46,"CAM":40,"LW":54,"RW":54,"ST":37}|0|Late runs into the box, set pieces
+Kieran Gibbs|LB|England|Arsenal|A|183|74|80|76|{"LB":76,"GK":6,"RB":66,"CB":54,"CDM":48,"CM":45,"CAM":40,"LW":52,"RW":52,"ST":36}|0|Arsenal 2011-2017
+Erik Pieters|LB|Netherlands|Stoke|B|183|80|72|76|{"LB":76,"RW":74,"GK":6,"RB":66,"CB":54,"CDM":48,"CM":45,"CAM":40,"LW":51,"ST":34}|0|Actually a LB — engine handles misfits
+Matt Targett|LB|England|Southampton|B|183|70|74|75|{"LB":75,"GK":6,"RB":65,"CB":53,"CDM":48,"CM":45,"CAM":39,"LW":51,"RW":51,"ST":34}|0|Southampton academy
+Charlie Taylor|LB|England|Burnley|B|178|73|76|74|{"LB":74,"GK":6,"RB":64,"CB":52,"CDM":47,"CM":44,"CAM":39,"LW":51,"RW":51,"ST":34}|0|Leeds then Burnley
+Eden Hazard|LW|Belgium|Chelsea|B|175|74|91|92|{"LW":92,"CAM":88,"RW":86,"ST":82,"GK":4,"RB":40,"LB":40,"CB":33,"CDM":45,"CM":60}|0|2015 PFA POTY, 2019 CL winner
+Sadio Mané|LW|Senegal|Liverpool|B|175|69|94|89|{"LW":89,"RW":86,"ST":84,"GK":4,"RB":39,"LB":39,"CB":32,"CDM":44,"CM":58,"CAM":70}|0|2019 CL, 2020 PL, 22-goal season
+Raheem Sterling|LW|England|Manchester City|B|170|69|93|89|{"LW":89,"RW":88,"CAM":80,"GK":4,"RB":39,"LB":39,"CB":32,"CDM":44,"CM":58,"ST":63}|0|2018-19 treble, 2019 PFA Young POTY
+Son Heung-Min|LW|South Korea|Tottenham|B|183|78|88|88|{"LW":88,"RW":88,"ST":85,"CAM":80,"GK":4,"RB":39,"LB":39,"CB":32,"CDM":44,"CM":57}|0|2019 CL final, 2020 Puskás winner
+Leroy Sané|LW|Germany|Manchester City|B|196|76|90|87|{"LW":87,"RW":84,"GK":4,"RB":39,"LB":39,"CB":32,"CDM":43,"CM":57,"CAM":68,"ST":62}|0|2017-19 City, 2018 PFA YPOTY
+Alexis Sánchez|LW|Chile|Arsenal|B|170|74|86|85|{"LW":85,"RW":84,"ST":82,"CAM":78,"GK":4,"RB":38,"LB":38,"CB":32,"CDM":43,"CM":56}|0|2014-17 Arsenal talisman, 2 FA Cups
+Anthony Martial|LW|France|Manchester United|B|181|76|84|84|{"LW":84,"ST":82,"RW":80,"GK":4,"RB":38,"LB":38,"CB":32,"CDM":42,"CM":55,"CAM":66}|0|2015 Golden Boy
+Wilfried Zaha|LW|Ivory Coast|Crystal Palace|B|180|70|88|84|{"LW":84,"RW":82,"ST":78,"GK":4,"RB":38,"LB":38,"CB":32,"CDM":42,"CM":55,"CAM":66}|0|Palace legend, two-footed dribbler
+Marcus Rashford|LW|England|Manchester United|B|186|70|92|84|{"LW":84,"ST":83,"RW":82,"GK":4,"RB":38,"LB":38,"CB":32,"CDM":42,"CM":55,"CAM":66}|0|Academy graduate, 2016 debut brace vs Arsenal
+Christian Pulisic|LW|USA|Chelsea|C|178|69|86|82|{"LW":82,"RW":80,"CAM":78,"GK":4,"RB":37,"LB":37,"CB":31,"CDM":42,"CM":54,"ST":58}|0|2019-20 Chelsea, "Captain America"
+Felipe Anderson|LW|Brazil|West Ham|B|176|70|84|81|{"LW":81,"RW":78,"CAM":78,"GK":4,"RB":37,"LB":37,"CB":31,"CDM":41,"CM":54,"ST":58}|0|2018-19 West Ham record signing
+Andros Townsend|LW|England|Crystal Palace|B|181|70|84|79|{"LW":79,"RW":79,"GK":4,"RB":37,"LB":37,"CB":31,"CDM":41,"CM":52,"CAM":62,"ST":57}|0|Rocket volleys vs Man City 2018
+Nathan Redmond|LW|England|Southampton|B|173|69|84|78|{"LW":78,"RW":77,"GK":4,"RB":36,"LB":36,"CB":30,"CDM":40,"CM":52,"CAM":62,"ST":56}|0|Southampton 2016-2022
+Ryan Sessegnon|LW|England|Fulham|B|178|70|82|77|{"LW":77,"LB":74,"GK":4,"RB":36,"CB":30,"CDM":40,"CM":51,"CAM":61,"RW":68,"ST":55}|0|2017-18 Championship POTY at 17
+Demarai Gray|LW|England|Leicester|B|178|70|84|76|{"LW":76,"RW":76,"GK":4,"RB":36,"LB":36,"CB":30,"CDM":40,"CM":51,"CAM":60,"ST":55}|0|2016 title winner at 19
+Trent Alexander-Arnold|RB|England|Liverpool|B|180|69|78|87|{"RB":87,"RW":80,"CM":72,"LB":70,"GK":6,"CB":60,"CDM":54,"CAM":43,"LW":41,"ST":38}|0|Best crossing fullback of era
+Kyle Walker|RB|England|Manchester City|B|178|73|93|85|{"RB":85,"LB":79,"RW":78,"CB":74,"GK":6,"CDM":52,"CM":49,"CAM":43,"LW":43,"ST":40}|0|Pep converted him, pace king
+César Azpilicueta|RB|Spain|Chelsea|B|178|76|70|84|{"RB":84,"LB":83,"CB":80,"CDM":74,"RW":72,"GK":6,"CM":49,"CAM":42,"LW":39,"ST":36}|3|Dave, played everywhere, captain
+Branislav Ivanović|RB|Serbia|Chelsea|B|188|84|66|84|{"GK":4,"RB":84,"LB":72,"CB":83,"CDM":74,"CM":49,"CAM":42,"LW":39,"RW":55,"ST":35}|1|Chelsea 2008-2017, 2012 CL winner, RB/CB hybrid
+Kieran Trippier|RB|England|Tottenham|B|173|71|74|83|{"RB":83,"RW":78,"LB":76,"GK":6,"CB":58,"CDM":52,"CM":48,"CAM":42,"LW":40,"ST":36}|0|Free-kick specialist, Atlético 2019
+Héctor Bellerín|RB|Spain|Arsenal|B|178|70|86|82|{"RB":82,"RW":76,"GK":6,"LB":71,"CB":57,"CDM":51,"CM":48,"CAM":42,"LW":41,"ST":38}|0|Usain Bolt comparison pace pre-injury
+Antonio Valencia|RB|Ecuador|Manchester United|B|180|79|85|81|{"RW":79,"RB":81,"GK":6,"LB":70,"CB":57,"CDM":50,"CM":47,"CAM":41,"LW":41,"ST":38}|0|Winger converted to RB, 2017 POTY nominee
+Bacary Sagna|RB|France|Manchester City|A|176|72|72|81|{"RB":81,"LB":77,"CB":75,"GK":6,"CDM":50,"CM":47,"CAM":41,"LW":39,"RW":54,"ST":36}|0|Arsenal's best RB era 2010-14
+Seamus Coleman|RB|Ireland|Everton|B|177|77|74|80|{"RB":80,"RW":74,"GK":6,"LB":69,"CB":56,"CDM":50,"CM":47,"CAM":41,"LW":39,"ST":36}|0|Everton stalwart 2009-2023
+Serge Aurier|RB|Ivory Coast|Tottenham|B|176|76|82|79|{"RB":79,"GK":6,"LB":68,"CB":55,"CDM":50,"CM":47,"CAM":41,"LW":40,"RW":54,"ST":37}|0|Hot-headed but talented
+Pablo Zabaleta|RB|Argentina|Manchester City|A|174|79|70|79|{"RB":79,"CDM":73,"GK":6,"LB":68,"CB":55,"CM":47,"CAM":41,"LW":38,"RW":52,"ST":35}|0|2012 title warrior
+DeAndre Yedlin|RB|USA|Tottenham|B|173|73|90|78|{"RB":78,"GK":6,"LB":68,"CB":55,"CDM":49,"CM":46,"CAM":40,"LW":40,"RW":55,"ST":38}|0|Olympic sprinter pace
+Matteo Darmian|RB|Italy|Manchester United|B|182|70|74|76|{"RB":76,"LB":76,"CB":73,"GK":6,"CDM":48,"CM":45,"CAM":40,"LW":37,"RW":51,"ST":35}|0|Versatile Italian
+Danny Simpson|RB|England|Leicester|B|175|76|72|75|{"RB":75,"GK":6,"LB":65,"CB":53,"CDM":48,"CM":45,"CAM":39,"LW":37,"RW":51,"ST":34}|0|2016 title RB
+Carl Jenkinson|RB|England|Arsenal|A|183|76|72|71|{"RB":71,"GK":6,"LB":62,"CB":51,"CDM":46,"CM":43,"CAM":38,"LW":36,"RW":48,"ST":33}|0|Arsenal fan who played for Arsenal
+Mohamed Salah|RW|Egypt|Liverpool|B|175|71|93|91|{"RW":91,"ST":88,"LW":86,"GK":4,"RB":40,"LB":40,"CB":33,"CDM":45,"CM":59,"CAM":71}|0|2017-2023, 32-goal debut season record
+Riyad Mahrez|RW|Algeria|Leicester|B|179|67|84|85|{"RW":85,"LW":82,"CAM":80,"GK":4,"RB":38,"LB":38,"CB":32,"CDM":43,"CM":56,"ST":60}|0|2016 title, 2016 PFA POTY
+Lucas Moura|RW|Brazil|Tottenham|B|172|73|88|84|{"RW":84,"LW":82,"CAM":78,"GK":4,"RB":38,"LB":38,"CB":32,"CDM":42,"CM":55,"ST":60}|0|2019 CL semi hat-trick at Ajax
+Willian|RW|Brazil|Chelsea|B|175|77|80|83|{"RW":83,"LW":82,"CAM":78,"GK":4,"RB":38,"LB":38,"CB":31,"CDM":42,"CM":55,"ST":59}|0|2014-2020 Chelsea, set pieces
+Nicolas Pépé|RW|Ivory Coast|Arsenal|C|178|73|84|83|{"RW":83,"LW":80,"GK":4,"RB":38,"LB":38,"CB":31,"CDM":42,"CM":55,"CAM":65,"ST":59}|0|£72m 2019 club record
+Diogo Jota|RW|Portugal|Liverpool|C|178|70|80|82|{"ST":82,"RW":82,"LW":81,"CAM":76,"GK":4,"RB":34,"LB":34,"CB":31,"CDM":39,"CM":45}|0|Wolves 2017-20 then Liverpool, clinical
+Erik Lamela|RW|Argentina|Tottenham|B|183|76|76|81|{"CAM":79,"RW":81,"LW":76,"GK":4,"RB":37,"LB":37,"CB":31,"CDM":41,"CM":54,"ST":58}|0|2013-2021 Spurs, 2021 Puskás winner
+Ashley Young|RW|England|Manchester United|B|175|68|80|80|{"RW":80,"LW":79,"LB":78,"RB":78,"GK":4,"CB":31,"CDM":41,"CM":53,"CAM":63,"ST":57}|0|Winger converted to fullback, 2018
+Adama Traoré|RW|Spain|Wolverhampton|B|178|79|96|79|{"RW":79,"RB":74,"LW":76,"ST":70,"GK":4,"LB":37,"CB":31,"CDM":41,"CM":52,"CAM":62}|0|Fastest player in the PL, 2018-2023 Wolves
+Aaron Lennon|RW|England|Tottenham|A|165|63|88|78|{"RW":78,"LW":78,"GK":4,"RB":36,"LB":36,"CB":30,"CDM":40,"CM":52,"CAM":62,"ST":56}|0|2005-2015 Spurs, England 2010 WC
+Michail Antonio|RW|England|West Ham|B|188|88|82|78|{"RW":78,"ST":78,"RB":76,"LW":74,"CB":70,"GK":4,"LB":36,"CDM":40,"CM":52,"CAM":62}|0|Played every outfield position for West Ham
+Marc Albrighton|RW|England|Leicester|B|175|70|76|77|{"RW":77,"LW":77,"GK":4,"RB":36,"LB":36,"CB":30,"CDM":40,"CM":51,"CAM":61,"ST":55}|0|2016 title, crossed for Vardy all season
+Daniel James|RW|Wales|Manchester United|B|178|70|94|77|{"RW":77,"LW":77,"GK":4,"RB":36,"LB":36,"CB":30,"CDM":40,"CM":51,"CAM":61,"ST":55}|0|2019 Utd signing, straight-line speed
+Robert Snodgrass|RW|Scotland|West Ham|B|183|76|66|76|{"RW":76,"LW":75,"CAM":74,"CM":72,"GK":4,"RB":36,"LB":36,"CB":30,"CDM":40,"ST":55}|0|Hull, West Ham, set-piece delivery
+Nathan Dyer|RW|England|Swansea|B|165|62|86|75|{"RW":75,"LW":75,"GK":4,"RB":35,"LB":35,"CB":30,"CDM":39,"CM":50,"CAM":60,"ST":54}|0|2013 League Cup winner
+Harry Kane|ST|England|Tottenham|B|188|86|70|91|{"ST":91,"CAM":84,"GK":4,"RB":36,"LB":36,"CB":33,"CDM":41,"CM":48,"LW":64,"RW":64}|0|2015-2023, 2x Golden Boot
+Sergio Agüero|ST|Argentina|Manchester City|B|173|70|80|91|{"ST":91,"GK":4,"RB":36,"LB":36,"CB":33,"CDM":41,"CM":48,"CAM":64,"LW":64,"RW":64}|0|93:20, 2012 title, City's all-time top scorer
+Pierre-Emerick Aubameyang|ST|Gabon|Arsenal|B|187|80|88|88|{"ST":88,"LW":86,"GK":4,"RB":35,"LB":35,"CB":32,"CDM":40,"CM":47,"CAM":62,"RW":62}|0|2018-2020 Arsenal, 2019-20 Golden Boot tied
+Roberto Firmino|ST|Brazil|Liverpool|B|181|76|76|87|{"ST":87,"CAM":84,"GK":4,"RB":35,"LB":35,"CB":32,"CDM":40,"CM":47,"LW":62,"RW":62}|0|False 9 pioneer, 2019 CL
+Romelu Lukaku|ST|Belgium|Manchester United|B|190|103|80|86|{"ST":86,"GK":4,"RB":35,"LB":35,"CB":32,"CDM":40,"CM":46,"CAM":61,"LW":61,"RW":61}|0|2017-19 Utd, 2019 Inter Serie A top scorer
+Alexandre Lacazette|ST|France|Arsenal|B|176|73|76|86|{"ST":86,"GK":4,"RB":35,"LB":35,"CB":32,"CDM":40,"CM":46,"CAM":61,"LW":61,"RW":61}|0|2017-2022 Arsenal
+Jamie Vardy|ST|England|Leicester|B|179|74|88|85|{"ST":85,"GK":4,"RB":34,"LB":34,"CB":32,"CDM":40,"CM":46,"CAM":60,"LW":60,"RW":60}|0|2016 title, 2019-20 Golden Boot
+Timo Werner|ST|Germany|Chelsea|C|180|75|92|84|{"ST":84,"LW":82,"GK":4,"RB":34,"LB":34,"CB":32,"CDM":39,"CM":46,"CAM":60,"RW":60}|0|2020 Chelsea arrival
+Olivier Giroud|ST|France|Chelsea|B|193|88|68|83|{"ST":83,"GK":4,"RB":34,"LB":34,"CB":31,"CDM":39,"CM":45,"CAM":59,"LW":59,"RW":59}|0|2018 WC winner, 2019-21 Chelsea FA Cup + CL
+Callum Wilson|ST|England|Bournemouth|B|180|66|87|81|{"ST":81,"GK":4,"RB":33,"LB":33,"CB":31,"CDM":38,"CM":44,"CAM":58,"LW":58,"RW":58}|0|Bournemouth's PL journey
+Danny Ings|ST|England|Southampton|B|178|73|75|81|{"ST":81,"GK":4,"RB":33,"LB":33,"CB":31,"CDM":38,"CM":44,"CAM":58,"LW":58,"RW":58}|0|2019-20 22 goals, injury comeback story
+Raúl Jiménez|ST|Mexico|Wolverhampton|B|189|81|78|81|{"ST":81,"GK":4,"RB":33,"LB":33,"CB":31,"CDM":38,"CM":44,"CAM":58,"LW":58,"RW":58}|0|Wolves 2018-2023
+Dominic Calvert-Lewin|ST|England|Everton|B|187|71|84|81|{"ST":81,"GK":4,"RB":33,"LB":33,"CB":31,"CDM":38,"CM":44,"CAM":58,"LW":58,"RW":58}|0|2020-21 England call-up
+Tammy Abraham|ST|England|Chelsea|C|196|80|74|79|{"ST":79,"GK":4,"RB":33,"LB":33,"CB":31,"CDM":38,"CM":44,"CAM":57,"LW":57,"RW":57}|0|Chelsea academy 2019-20 15 PL goals
+Glenn Murray|ST|England|Brighton|B|188|88|60|78|{"ST":78,"GK":4,"RB":33,"LB":33,"CB":30,"CDM":37,"CM":43,"CAM":56,"LW":56,"RW":56}|0|Brighton 2017-2020
+Troy Deeney|ST|England|Watford|B|188|101|64|78|{"ST":78,"GK":4,"RB":33,"LB":33,"CB":30,"CDM":37,"CM":43,"CAM":56,"LW":56,"RW":56}|0|Watford captain, "cojones" moment
+Ashley Barnes|ST|England|Burnley|B|188|83|62|78|{"ST":78,"GK":4,"RB":33,"LB":33,"CB":30,"CDM":37,"CM":43,"CAM":56,"LW":56,"RW":56}|0|Burnley 2014-2024
+Chris Wood|ST|New Zealand|Burnley|B|191|90|68|78|{"ST":78,"GK":4,"RB":33,"LB":33,"CB":30,"CDM":37,"CM":43,"CAM":56,"LW":56,"RW":56}|0|Burnley 2017-2021
+André Gray|ST|England|Watford|B|180|72|84|77|{"ST":77,"GK":4,"RB":33,"LB":33,"CB":30,"CDM":37,"CM":43,"CAM":55,"LW":55,"RW":55}|0|Burnley 2016 promotion, Watford 2018-21
+Neal Maupay|ST|France|Brighton|B|173|70|74|76|{"ST":76,"GK":4,"RB":32,"LB":32,"CB":30,"CDM":37,"CM":42,"CAM":55,"LW":55,"RW":55}|0|Brighton 2019-2022
